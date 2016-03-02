@@ -7,10 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NXPen.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
+        
+        NXPen *kyooPen = [[NXPen alloc] initRedWithOwnerName: @"Kyoo"];
+        [kyooPen printDescriptionOfRed];
+        
         NSLog(@"Hello, World!");
     }
     return 0;

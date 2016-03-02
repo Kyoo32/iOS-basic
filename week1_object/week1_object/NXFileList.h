@@ -14,4 +14,7 @@
 
 -(void)showListUnderDirectory:(NSString*)DirectoryPath;
 
+-(void)DisplayAllFilesAtPath:(NSString*)path
+              filterByExtension:(NSString*)extension;
+
 @end

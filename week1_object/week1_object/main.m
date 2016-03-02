@@ -16,11 +16,13 @@ int main(int argc, const char * argv[]) {
         NXPen *kyooPen = [[NXPen alloc] initRedWithOwnerName: @"Kyoo"];
         [kyooPen printDescriptionOfRed];
      
+        
+        
         NXFileList *ls = [[NXFileList alloc] init];
         
-        [ls showListUnderDirectory:@"/Users/KateKyuWon/Desktop"];
-
-        
+        //[ls showListUnderDirectory:@"/Users/KateKyuWon/Desktop"];
+        //[ls DisplayAllFilesAtPath:@"/Users/KateKyuWon/Desktop" filterByExtension:@"png"];
+        [ls DisplayAllFilesAtPath:@"/Users/KateKyuWon/Desktop/nearHoneyTip/NearHoneyTip/NearHoneyTip" filterByExtension:@"m"]; //deep안됨;;
     }
     return 0;
 }

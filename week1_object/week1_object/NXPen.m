@@ -11,6 +11,17 @@
 
 @implementation NXPen
 
+/*
+ -(id)initWithBrand:(NSString*)brand{
+    self = [super init];
+    if(self){
+    ~
+    }
+    return self;
+ }
+ */
+
+
 
 -(id)initRedWithOwnerName:(NSString*)OwnerName{
     self = [super init];

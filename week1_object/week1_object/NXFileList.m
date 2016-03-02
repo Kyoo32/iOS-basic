@@ -10,4 +10,27 @@
 
 @implementation NXFileList
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.Q1 = [[NSFileManager alloc] init];
+    }
+    return self;
+}
+
+-(void)showListUnderDirectory:(NSString*)DirectoryPath{
+
+    NSArray* result = [self.Q1 contentsOfDirectoryAtPath:DirectoryPath error:NULL];
+    int count = [result count];
+    
+    for(int i = 0; i < count; i++){
+        NSLog(@"%@", result[i]);
+    }
+    
+    
+    return;
+}
+
+
 @end

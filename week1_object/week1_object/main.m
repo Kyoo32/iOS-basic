@@ -8,14 +8,19 @@
 
 #import <Foundation/Foundation.h>
 #import "NXPen.h"
+#import "NXFileList.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
         NXPen *kyooPen = [[NXPen alloc] initRedWithOwnerName: @"Kyoo"];
         [kyooPen printDescriptionOfRed];
+     
+        NXFileList *ls = [[NXFileList alloc] init];
         
-        NSLog(@"Hello, World!");
+        [ls showListUnderDirectory:@"/Users/KateKyuWon/Desktop"];
+
+        
     }
     return 0;
 }

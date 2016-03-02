@@ -10,7 +10,8 @@
 
 @interface NXFileList : NSObject
 
+@property (strong, nonatomic) NSFileManager* Q1;
 
-NSFileManager
+-(void)showListUnderDirectory:(NSString*)DirectoryPath;
 
 @end

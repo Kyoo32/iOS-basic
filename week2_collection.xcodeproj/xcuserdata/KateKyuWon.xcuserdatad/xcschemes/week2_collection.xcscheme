@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CE243F171C86752A00A6A38E"
-               BuildableName = "week1_object"
-               BlueprintName = "week1_object"
-               ReferencedContainer = "container:week1_object.xcodeproj">
+               BlueprintIdentifier = "CE05264B1C8FAE1500913C2D"
+               BuildableName = "week2_collection"
+               BlueprintName = "week2_collection"
+               ReferencedContainer = "container:week2_collection.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CE243F171C86752A00A6A38E"
-            BuildableName = "week1_object"
-            BlueprintName = "week1_object"
-            ReferencedContainer = "container:week1_object.xcodeproj">
+            BlueprintIdentifier = "CE05264B1C8FAE1500913C2D"
+            BuildableName = "week2_collection"
+            BlueprintName = "week2_collection"
+            ReferencedContainer = "container:week2_collection.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -55,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CE243F171C86752A00A6A38E"
-            BuildableName = "week1_object"
-            BlueprintName = "week1_object"
-            ReferencedContainer = "container:week1_object.xcodeproj">
+            BlueprintIdentifier = "CE05264B1C8FAE1500913C2D"
+            BuildableName = "week2_collection"
+            BlueprintName = "week2_collection"
+            ReferencedContainer = "container:week2_collection.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CE243F171C86752A00A6A38E"
-            BuildableName = "week1_object"
-            BlueprintName = "week1_object"
-            ReferencedContainer = "container:week1_object.xcodeproj">
+            BlueprintIdentifier = "CE05264B1C8FAE1500913C2D"
+            BuildableName = "week2_collection"
+            BlueprintName = "week2_collection"
+            ReferencedContainer = "container:week2_collection.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "15BF2FBF3DA7559CCA754AA4A414987A043BBAB6",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "330E47407BD6E6DA1C956B11B083BFD63AFDEC9E" : 0,
+    "15BF2FBF3DA7559CCA754AA4A414987A043BBAB6" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "84848248-5E14-4290-AABB-553B054613A4",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "330E47407BD6E6DA1C956B11B083BFD63AFDEC9E" : "iOS-basic\/week1_object\/week1_object\/",
+    "15BF2FBF3DA7559CCA754AA4A414987A043BBAB6" : "iOS-basic\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "week1_object",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "week1_object\/week1_object.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Kyoo32\/iOS-basic.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "15BF2FBF3DA7559CCA754AA4A414987A043BBAB6"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Kyoo32\/iOS-basic\/tree\/master\/week1_object",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "330E47407BD6E6DA1C956B11B083BFD63AFDEC9E"
+    }
+  ]
+}

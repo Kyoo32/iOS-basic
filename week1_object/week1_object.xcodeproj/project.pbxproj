@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE0BA2501C9158E3004C0818 /* JPDirectoryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0BA24F1C9158E3004C0818 /* JPDirectoryManager.m */; };
 		CE243F1C1C86752A00A6A38E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE243F1B1C86752A00A6A38E /* main.m */; };
 		CE243F281C8675FF00A6A38E /* NXPen.m in Sources */ = {isa = PBXBuildFile; fileRef = CE243F271C8675FF00A6A38E /* NXPen.m */; };
 		CE243F2B1C867DE600A6A38E /* NXFileList.m in Sources */ = {isa = PBXBuildFile; fileRef = CE243F2A1C867DE600A6A38E /* NXFileList.m */; };
@@ -25,6 +26,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CE0BA24E1C9158E3004C0818 /* JPDirectoryManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPDirectoryManager.h; sourceTree = "<group>"; };
+		CE0BA24F1C9158E3004C0818 /* JPDirectoryManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPDirectoryManager.m; sourceTree = "<group>"; };
 		CE243F181C86752A00A6A38E /* week1_object */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = week1_object; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE243F1B1C86752A00A6A38E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CE243F261C8675FF00A6A38E /* NXPen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NXPen.h; sourceTree = "<group>"; };
@@ -68,6 +71,8 @@
 				CE243F271C8675FF00A6A38E /* NXPen.m */,
 				CE243F291C867DE600A6A38E /* NXFileList.h */,
 				CE243F2A1C867DE600A6A38E /* NXFileList.m */,
+				CE0BA24E1C9158E3004C0818 /* JPDirectoryManager.h */,
+				CE0BA24F1C9158E3004C0818 /* JPDirectoryManager.m */,
 			);
 			path = week1_object;
 			sourceTree = "<group>";
@@ -129,6 +134,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE243F1C1C86752A00A6A38E /* main.m in Sources */,
+				CE0BA2501C9158E3004C0818 /* JPDirectoryManager.m in Sources */,
 				CE243F281C8675FF00A6A38E /* NXPen.m in Sources */,
 				CE243F2B1C867DE600A6A38E /* NXFileList.m in Sources */,
 			);
@@ -249,6 +255,7 @@
 				CE243F211C86752A00A6A38E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

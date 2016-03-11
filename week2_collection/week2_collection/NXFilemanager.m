@@ -27,10 +27,10 @@
 - (NSArray*)getStringComponentFromData:(NSData*)data{
     
     NSString *rawString = [[NSString alloc] initWithData:data encoding:4];
-    NSLog(@"%@", rawString);
+    //NSLog(@"%@", rawString);
     
     NSArray* rawComponent = [rawString componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@",\n"]];
-    NSLog(@"\n\n\nHERE!\n%@",rawComponent);
+    //NSLog(@"\n\n\nHERE!\n%@",rawComponent);
     
     return rawComponent;
 }

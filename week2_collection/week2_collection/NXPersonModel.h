@@ -16,7 +16,7 @@
 @property NSMutableArray* personTeamNumberArray;
 @property NSMutableArray* personSexArray;
 
-//@property NSMutableDictionary* personDictionary;
+@property NSMutableDictionary* personDictionary;
 
 
 

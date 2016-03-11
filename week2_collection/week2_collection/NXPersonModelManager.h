@@ -17,6 +17,11 @@
 -(void)initNXPersonModelWithStringComponent:(NSArray*)component;
 
 
+
+- (int)personCount; //added after class finished
+- (NSDictionary*)makeOnePersonAtIndex:(int)index; //added after class finished
+- (void)makePersonModelDictionary; //added after class finished
+
 - (NSString*)personNameAtIndex:(int)index;
 - (NSNumber*)personNumberAtIndex:(int)index;
 - (BOOL)isMaleAtIndex:(int)index;

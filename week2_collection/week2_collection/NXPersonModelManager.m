@@ -8,14 +8,16 @@
 
 #import "NXPersonModelManager.h"
 
-@implementation NXPersonModelManager
+@implementation NXPersonModelManager{
+    int studentCount;
+}
 
 -(void)initNXPersonModelWithStringComponent:(NSArray*)component{
     
     self.next = [[NXPersonModel alloc] init];
     
     
-    int studentCount = [component count] / 4;
+    studentCount = [component count] / 4;
     int j = 0;
     
     for(int i = 0; i<studentCount; i++)
@@ -59,7 +61,10 @@
 
 
 - (NSDictionary*)getPersonObjectAtIndex:(int)index{
-    return [[NSDictionary alloc] initWithObjectsAndKeys:[self.next.personNameArray objectAtIndex:index], @"name", [self.next.personNumberArray objectAtIndex:index], @"number", [self.next.personSexArray objectAtIndex:index], @"sex", [self.next.personTeamNumberArray objectAtIndex:index], @"teamNumber", nil];
+    
+    NSString* searchingindex = [NSString stringWithFormat:@"%d", index];
+    return [self.next.personDictionary objectForKey:searchingindex];
+
 }
 /*
 objectforkey : dictionary
@@ -84,8 +89,7 @@ valueforkey: deep-search supplies
         if ([obj1 integerValue] > [obj2 integerValue]) {
             return (NSComparisonResult)NSOrderedDescending;
         }
-        
-        if ([obj1 integerValue] < [obj2 integerValue]) {
+        else if ([obj1 integerValue] < [obj2 integerValue]) {
             return (NSComparisonResult)NSOrderedAscending;
         }
         return (NSComparisonResult)NSOrderedSame;
@@ -104,7 +108,50 @@ valueforkey: deep-search supplies
 
 //yet
 - (NSArray*) sortedByTeam{
-    return nil;
+    //방법1
+    //사전에서 objects만 가져오기. 가져온 오브젝트사전의 'teamnumber'키 값으로 정렬하기.
+    //NSArray *sortedArray = [[self.next.personDictionary allValues] sortedArrayUsingComparator
+    
+    
+    
+    
+    
+    //방법2 - 그냥 팀번호만 나열
+    NSMutableArray *inProcess = [[NSMutableArray alloc]init];
+    
+    
+    return [self.next.personTeamNumberArray sortedArrayUsingComparator: ^(id obj1, id obj2) {
+        
+        if ([obj1 integerValue] > [obj2 integerValue]) {
+            return (NSComparisonResult)NSOrderedDescending;
+        }
+        else if ([obj1 integerValue] < [obj2 integerValue]) {
+            return (NSComparisonResult)NSOrderedAscending;
+        }
+        return (NSComparisonResult)NSOrderedSame;
+    }];
+    
+    
+    //return nil;
+}
+
+
+- (NSUInteger*)personCount{
+    return studentCount;
+}
+
+-(NSDictionary*)makeOnePersonAtIndex:(int)index{
+    return [[NSDictionary alloc] initWithObjectsAndKeys:[self.next.personNameArray objectAtIndex:index], @"name", [self.next.personNumberArray objectAtIndex:index], @"number", [self.next.personSexArray objectAtIndex:index], @"sex", [self.next.personTeamNumberArray objectAtIndex:index], @"teamNumber", nil];
+}
+
+- (void)makePersonModelDictionary{
+    
+    NSString *numberToStringTemp;
+    for(int i = 0 ; i < studentCount ; i++){
+        numberToStringTemp = [NSString stringWithFormat:@"%d", i];
+        [self.next.personDictionary  setObject: [self makeOnePersonAtIndex:i] forKey:numberToStringTemp];
+    }
+    
 }
 
 

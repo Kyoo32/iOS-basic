@@ -19,7 +19,7 @@
         self.personNumberArray = [[NSMutableArray alloc] init];
         self.personTeamNumberArray = [[NSMutableArray alloc] init];
         self.personSexArray = [[NSMutableArray alloc] init];
-        //self.personDictionary = [[NSMutableDictionary alloc] init];
+        self.personDictionary = [[NSMutableDictionary alloc] init];
     }
     return self;
 }

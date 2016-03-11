@@ -30,9 +30,9 @@ int main(int argc, const char * argv[]) {
         if([world isMaleAtIndex:0]){
             NSLog(@"is Male at 2? yes" );
         }
-        //NSLog((@"person number at 1: %@", [world personNumberAtIndex: 3]));  //??????
+        NSLog(@"person number at 1: %@", [world personNumberAtIndex: 1]);  //??????
         
-        NSLog(@"tean number of the person at index 2 : %@", [world.next.personTeamNumberArray objectAtIndex:2]);
+        NSLog(@"team number of the person at index 2 : %@", [world.next.personTeamNumberArray objectAtIndex:2]);
         NSLog(@"Dic : %@", [world getPersonObjectAtIndex:0]);
         
         
@@ -40,13 +40,19 @@ int main(int argc, const char * argv[]) {
         
         /* <find> */
         NSLog(@"person name of 141059 : %@", [world findPersonNameByNumber:@141059]);
-        //NSLog(@"person number of 임은주 : %@", [world findPersonNameByNumber:@"임은주"]);  ///?????
-        
+        NSLog(@"person number of 임은주 : %@", [world findPersonNumberByName:@"임은주"]);
     
         /* <sort> */
         NSLog(@"%@", [world sortedByName]);
         NSLog(@"%@",[world sortedByNumber]);
         NSLog(@"%@", [world sortedByTeam]);
+        
+        /*filter*/
+        NSLog(@"member of team 3 : %@", [world filterByTeam:@3]);
+        NSLog(@"memeber who is female : %@", [world filterByGender:NO]);
+        NSLog(@"Distinct Last name : %@", [world filterDistinctByLastName]); ///????콘솔에 한글로 찍으려면 어떻게 해야하지?
+        
+        
 
     }
     return 0;

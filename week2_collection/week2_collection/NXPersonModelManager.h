@@ -35,4 +35,8 @@
 - (NSArray*) sortedByTeam;
 
 
+- (NSArray*) filterByTeam:(NSNumber*)team;
+- (NSArray*) filterByGender:(BOOL)isMale;
+- (NSSet*) filterDistinctByLastName;
+
 @end

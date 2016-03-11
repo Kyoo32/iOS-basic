@@ -106,13 +106,10 @@ valueforkey: deep-search supplies
  */
 
 
-//yet
 - (NSArray*) sortedByTeam{
     //방법1
     //사전에서 objects만 가져오기. 가져온 오브젝트사전의 'teamnumber'키 값으로 정렬하기.
     //NSArray *sortedArray = [[self.next.personDictionary allValues] sortedArrayUsingComparator
-    
-    
     
     
     
@@ -152,7 +149,55 @@ valueforkey: deep-search supplies
         [self.next.personDictionary  setObject: [self makeOnePersonAtIndex:i] forKey:numberToStringTemp];
     }
     
+    
 }
+
+- (NSArray*) filterByTeam:(NSNumber*)team{
+    NSMutableArray* result = [[NSMutableArray alloc] init];
+    int i = 0;
+    
+    for(NSNumber* num in self.next.personTeamNumberArray){
+        if([num compare:team] == NSOrderedSame){
+            [result addObject:[self.next.personDictionary objectForKey: [NSString stringWithFormat:@"%d",i]]];
+        }
+        i++;
+    }
+    return result;
+}
+- (NSArray*) filterByGender:(BOOL)isMale{
+    NSMutableArray* result = [[NSMutableArray alloc] init];
+    int i = 0;
+    NSString* fig;
+    if(isMale == YES){
+        fig = @"M";
+    } else {
+        fig = @"F";
+    }
+    
+    for(NSString* sex in self.next.personSexArray){
+        if([sex isEqualToString: fig] == YES){
+            [result addObject:[self.next.personDictionary objectForKey: [NSString stringWithFormat:@"%d",i]]];
+        }
+        i++;
+    }
+    return result;
+}
+- (NSSet*) filterDistinctByLastName{
+    
+    NSMutableSet* result = [[NSMutableSet alloc] init];
+    
+    for(NSString* name in self.next.personNameArray){
+        
+        NSString* lastName = [name substringToIndex:1];
+        
+        [result addObject:[NSString stringWithUTF8String: [lastName UTF8String]]];
+        
+    }
+    return result;
+    
+}
+
+
 
 
 @end

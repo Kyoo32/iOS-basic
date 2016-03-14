@@ -7,9 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NXPersonModelManager.h"
+#import "NXFilemanager.h"
 
 @interface SecondViewController : UIViewController
 
+
+@property NXPersonModelManager* iOSLecture;
+
+@property (weak, nonatomic) IBOutlet UITextField *searchingName;
+- (IBAction)searchedName:(id)sender;
+@property (weak, nonatomic) IBOutlet UILabel *resultOfNumber;
+- (IBAction)showAllName:(id)sender;
 
 @end
 

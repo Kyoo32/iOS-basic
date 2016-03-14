@@ -15,7 +15,7 @@
 -(void)initNXPersonModelWithStringComponent:(NSArray*)component{
     
     self.next = [[NXPersonModel alloc] init];
-    //NSLog(<#NSString * _Nonnull format, ...#>)
+    
     
     studentCount = [component count] / 4;
     int j = 0;
@@ -30,8 +30,8 @@
         
     }
     
-    NSLog(@"!!!%@", self.next.personNameArray);
-    NSLog(@"???%@", self.next.personNumberArray);
+    //NSLog(@"%@", self.next.personNameArray);
+    //NSLog(@"%@", self.next.personNumberArray);
     
 
 }

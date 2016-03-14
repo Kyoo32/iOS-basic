@@ -18,6 +18,9 @@
 		CE97F8A31C965D6B00860240 /* week3_tapVCUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE97F8A21C965D6B00860240 /* week3_tapVCUITests.m */; };
 		CE97F8B51C965F8E00860240 /* NXDetail2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE97F8B41C965F8E00860240 /* NXDetail2ViewController.m */; };
 		CE97F8BB1C96627100860240 /* NXDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE97F8BA1C96627100860240 /* NXDetailViewController.m */; };
+		CE97F8C21C96675A00860240 /* NXPersonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE97F8BF1C96675A00860240 /* NXPersonModel.m */; };
+		CE97F8C31C96675A00860240 /* NXPersonModelManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE97F8C11C96675A00860240 /* NXPersonModelManager.m */; };
+		CE97F8C51C96676900860240 /* NXFilemanager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE97F8C41C96676900860240 /* NXFilemanager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +63,12 @@
 		CE97F8B41C965F8E00860240 /* NXDetail2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NXDetail2ViewController.m; sourceTree = "<group>"; };
 		CE97F8B91C96627100860240 /* NXDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NXDetailViewController.h; sourceTree = "<group>"; };
 		CE97F8BA1C96627100860240 /* NXDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NXDetailViewController.m; sourceTree = "<group>"; };
+		CE97F8BD1C96675A00860240 /* NXFilemanager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NXFilemanager.h; path = ../../week2_collection/week2_collection/NXFilemanager.h; sourceTree = "<group>"; };
+		CE97F8BE1C96675A00860240 /* NXPersonModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NXPersonModel.h; path = ../../week2_collection/week2_collection/NXPersonModel.h; sourceTree = "<group>"; };
+		CE97F8BF1C96675A00860240 /* NXPersonModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NXPersonModel.m; path = ../../week2_collection/week2_collection/NXPersonModel.m; sourceTree = "<group>"; };
+		CE97F8C01C96675A00860240 /* NXPersonModelManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NXPersonModelManager.h; path = ../../week2_collection/week2_collection/NXPersonModelManager.h; sourceTree = "<group>"; };
+		CE97F8C11C96675A00860240 /* NXPersonModelManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NXPersonModelManager.m; path = ../../week2_collection/week2_collection/NXPersonModelManager.m; sourceTree = "<group>"; };
+		CE97F8C41C96676900860240 /* NXFilemanager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NXFilemanager.m; path = ../../week2_collection/week2_collection/NXFilemanager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +119,7 @@
 		CE97F8791C965D6A00860240 /* week3_tapVC */ = {
 			isa = PBXGroup;
 			children = (
+				CE97F8BC1C96670F00860240 /* NXperson */,
 				CE97F87D1C965D6A00860240 /* AppDelegate.h */,
 				CE97F87E1C965D6A00860240 /* AppDelegate.m */,
 				CE97F8801C965D6A00860240 /* FirstViewController.h */,
@@ -153,6 +163,19 @@
 				CE97F8A41C965D6B00860240 /* Info.plist */,
 			);
 			path = week3_tapVCUITests;
+			sourceTree = "<group>";
+		};
+		CE97F8BC1C96670F00860240 /* NXperson */ = {
+			isa = PBXGroup;
+			children = (
+				CE97F8BD1C96675A00860240 /* NXFilemanager.h */,
+				CE97F8C41C96676900860240 /* NXFilemanager.m */,
+				CE97F8BE1C96675A00860240 /* NXPersonModel.h */,
+				CE97F8BF1C96675A00860240 /* NXPersonModel.m */,
+				CE97F8C01C96675A00860240 /* NXPersonModelManager.h */,
+				CE97F8C11C96675A00860240 /* NXPersonModelManager.m */,
+			);
+			name = NXperson;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,10 +310,13 @@
 			files = (
 				CE97F8851C965D6A00860240 /* SecondViewController.m in Sources */,
 				CE97F87F1C965D6A00860240 /* AppDelegate.m in Sources */,
+				CE97F8C31C96675A00860240 /* NXPersonModelManager.m in Sources */,
 				CE97F8821C965D6A00860240 /* FirstViewController.m in Sources */,
+				CE97F8C21C96675A00860240 /* NXPersonModel.m in Sources */,
 				CE97F8BB1C96627100860240 /* NXDetailViewController.m in Sources */,
 				CE97F8B51C965F8E00860240 /* NXDetail2ViewController.m in Sources */,
 				CE97F87C1C965D6A00860240 /* main.m in Sources */,
+				CE97F8C51C96676900860240 /* NXFilemanager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

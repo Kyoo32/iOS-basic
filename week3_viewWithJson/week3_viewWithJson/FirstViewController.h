@@ -12,11 +12,8 @@
 
 
 @property UIImagePickerController *ipc;
-//@property UIPopoverController *popover;
 
-
-@property (weak, nonatomic)  IBOutlet UIButton *btnCameraroll;
-
+@property (weak, nonatomic)  UIButton *goToPickImage;
 @property (weak, nonatomic) IBOutlet UIImageView *chosenImg;
 
 

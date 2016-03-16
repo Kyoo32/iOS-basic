@@ -28,6 +28,7 @@
     self.movieImage.image = selectedImage;
     //[[NSBundle mainBundle] pathForResource:imagePath ofType:@"jpg"];
     self.movieTitle.text = [self.selectedMovie objectForKey:@"title"];
+    self.movieContent.text = [self.selectedMovie objectForKey:@"content"];
     
     // Do any additional setup after loading the view.
 }

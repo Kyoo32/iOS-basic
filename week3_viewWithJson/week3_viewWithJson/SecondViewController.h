@@ -12,8 +12,6 @@
 
 @interface SecondViewController : UIViewController
 
-
-
 @property moviePicker* mp;
 
 

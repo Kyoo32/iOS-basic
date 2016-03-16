@@ -21,27 +21,19 @@
     self.ipc= [[UIImagePickerController alloc] init];
     self.ipc.delegate = self;
     self.ipc.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-    //if(UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPhone)
+    if(UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPhone)
         [self presentViewController:self.ipc animated:YES completion:nil];
-//    else
-//    {
-//        popover=[[UIPopoverController alloc]initWithContentViewController:self.ipc];
-//        [popover presentPopoverFromRect:self.btnCameraroll.frame inView:self.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
-//    }
-
-    // - See more at: http://www.theappguruz.com/blog/ios-image-picker-controller#sthash.PNJnO2FN.dpuf
 }
 
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     
     
+    UIImage *chosenImage = [info objectForKey: UIImagePickerControllerOriginalImage] ;
     
-    UIImage *chosenImage1 = [info objectForKey: UIImagePickerControllerOriginalImage] ;
-    
-    NSLog(@"333333333333333 %@", chosenImage1);
+    NSLog(@"333333333333333 %@", chosenImage);
 
-    self.chosenImg.image = chosenImage1;
+    self.chosenImg.image = chosenImage;
     
     [self.ipc dismissViewControllerAnimated:YES completion:NULL];
     

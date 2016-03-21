@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--photoPicker-->
@@ -26,7 +27,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X5y-e8-TC2">
-                                <rect key="frame" x="200" y="50" width="200" height="100"/>
+                                <rect key="frame" x="100" y="50" width="200" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="4vA-I8-gNY"/>
                                     <constraint firstAttribute="height" constant="100" id="ZIg-os-iVE"/>
@@ -36,18 +37,41 @@
                                     <action selector="selectPhoto:" destination="9pv-A4-QxB" eventType="touchUpInside" id="NKF-XD-9jc"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pj6-U9-Uyx">
+                                <rect key="frame" x="300" y="50" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="B9e-OE-YX3"/>
+                                    <constraint firstAttribute="width" constant="200" id="k8e-2h-ZLY"/>
+                                </constraints>
+                                <state key="normal" title="New Image"/>
+                                <connections>
+                                    <action selector="takePhoto:" destination="9pv-A4-QxB" eventType="touchUpInside" id="ptH-xi-UvO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="X5y-e8-TC2" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="30" id="10e-H1-0Qf"/>
+                            <constraint firstItem="X5y-e8-TC2" firstAttribute="leading" secondItem="SEc-Ln-Asa" secondAttribute="leading" id="AFC-wt-dAs"/>
                             <constraint firstItem="SEc-Ln-Asa" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="AaW-mw-8Rn"/>
+                            <constraint firstItem="X5y-e8-TC2" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="Mdq-8Q-tlA"/>
+                            <constraint firstItem="pj6-U9-Uyx" firstAttribute="leading" secondItem="X5y-e8-TC2" secondAttribute="trailing" id="NgU-ve-GYg"/>
                             <constraint firstItem="X5y-e8-TC2" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="Oxf-AH-i3Z"/>
                             <constraint firstItem="X5y-e8-TC2" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" constant="-200" id="XoQ-7X-LIx"/>
+                            <constraint firstItem="X5y-e8-TC2" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="80" id="fnW-gs-EOK"/>
+                            <constraint firstItem="pj6-U9-Uyx" firstAttribute="baseline" secondItem="X5y-e8-TC2" secondAttribute="baseline" id="jbb-hE-rVV"/>
                             <constraint firstItem="X5y-e8-TC2" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="nfa-ho-fKy"/>
+                            <constraint firstItem="X5y-e8-TC2" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="80" id="pMb-eR-DFV"/>
                             <constraint firstItem="SEc-Ln-Asa" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" id="sxp-oJ-ifo"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="Mdq-8Q-tlA"/>
+                                <exclude reference="Oxf-AH-i3Z"/>
+                                <exclude reference="XoQ-7X-LIx"/>
+                                <exclude reference="fnW-gs-EOK"/>
                                 <exclude reference="nfa-ho-fKy"/>
+                                <exclude reference="pMb-eR-DFV"/>
                             </mask>
                         </variation>
                     </view>

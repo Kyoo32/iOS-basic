@@ -7,6 +7,7 @@
 //
 
 #import "FirstViewController.h"
+#import <MobileCoreServices/MobileCoreServices.h>
 
 @interface FirstViewController (){
    
@@ -20,20 +21,49 @@
     
     self.ipc= [[UIImagePickerController alloc] init];
     self.ipc.delegate = self;
-    self.ipc.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    
+    if( [UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary] ){
+        self.ipc.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    }
     if(UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPhone)
         [self presentViewController:self.ipc animated:YES completion:nil];
+}
+- (IBAction)takePhoto:(id)sender {
+    if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
+        
+        UIImagePickerController *ipc = [[UIImagePickerController alloc]init];
+        
+        ipc.delegate = self;
+        ipc.sourceType = UIImagePickerControllerSourceTypeCamera;
+        ipc.mediaTypes = [NSArray arrayWithObject:(NSString*) kUTTypeImage];
+        
+        [self presentViewController:ipc animated:YES completion:nil];
+    }
+    
+}
+
+-(void)image:(UIImage*)image finishedSavingWithError:(NSError*) error contextInfo:(void*)contextInfo{
+    if(error){
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle : @"Save failed" message : @"Failed to save image/video" delegate : nil cancelButtonTitle : @"Ok" otherButtonTitles: nil];
+        [alert show];
+    }
 }
 
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     
+    NSString *mediaType = info[UIImagePickerControllerMediaType];
     
-    UIImage *chosenImage = [info objectForKey: UIImagePickerControllerOriginalImage] ;
     
-    NSLog(@"333333333333333 %@", chosenImage);
+    if([mediaType isEqualToString:(NSString*) kUTTypeImage] ){
+        UIImage *chosenImage = [info objectForKey: UIImagePickerControllerOriginalImage] ;
+        
+        NSLog(@"333333333333333 %@", chosenImage);
 
-    self.chosenImg.image = chosenImage;
+        self.chosenImg.image = chosenImage;
+    } else if ([mediaType isEqualToString:(NSString*) kUTTypeMovie]){
+        //in the case of video.
+    }
     
     [self.ipc dismissViewControllerAnimated:YES completion:NULL];
     
@@ -45,6 +75,7 @@
 
     
     [self.ipc dismissViewControllerAnimated:YES completion:NULL];
+    
     
 }
 

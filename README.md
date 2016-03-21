@@ -14,4 +14,6 @@
 
 * [week3_viewController and JSON]first_dratf - 2016. 3. 16 around 16:30<br />
     second_ui little - 2016. 3. 16 around 16:50<br />
-    ##### NEED : understand data-modeling and make it along this project 
+    ##### NEED  understand data-modeling and make it along this project 
+
+* [week4_viewWithCG] first_agong-ee - 2016. 3. 21 around 22:00

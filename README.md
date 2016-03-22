@@ -10,8 +10,6 @@
 
 * [week3_view and controller]practice view, controller, alert, IBaction, IBoutlet - 2016. 3. 14 around 13:00
 
-<br />
-
 * [week3_viewController and JSON]first_dratf - 2016. 3. 16 around 16:30<br />
     second_ui little - 2016. 3. 16 around 16:50<br />
     ##### NEED  understand data-modeling and make it along this project 

@@ -16,6 +16,7 @@
 		CE013B7A1C9F996E0064EB5D /* week4_forViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE013B791C9F996E0064EB5D /* week4_forViewTests.m */; };
 		CE013B851C9F996E0064EB5D /* week4_forViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE013B841C9F996E0064EB5D /* week4_forViewUITests.m */; };
 		CE013B941C9F998D0064EB5D /* MyView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE013B931C9F998D0064EB5D /* MyView.m */; };
+		CE8C39FD1CA147E200993517 /* BasicDraw.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8C39FC1CA147E200993517 /* BasicDraw.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		CE013B861C9F996E0064EB5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE013B921C9F998D0064EB5D /* MyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyView.h; sourceTree = "<group>"; };
 		CE013B931C9F998D0064EB5D /* MyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyView.m; sourceTree = "<group>"; };
+		CE8C39FB1CA147E200993517 /* BasicDraw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicDraw.h; sourceTree = "<group>"; };
+		CE8C39FC1CA147E200993517 /* BasicDraw.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicDraw.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,8 @@
 				CE013B661C9F996E0064EB5D /* ViewController.m */,
 				CE013B921C9F998D0064EB5D /* MyView.h */,
 				CE013B931C9F998D0064EB5D /* MyView.m */,
+				CE8C39FB1CA147E200993517 /* BasicDraw.h */,
+				CE8C39FC1CA147E200993517 /* BasicDraw.m */,
 				CE013B681C9F996E0064EB5D /* Main.storyboard */,
 				CE013B6B1C9F996E0064EB5D /* Assets.xcassets */,
 				CE013B6D1C9F996E0064EB5D /* LaunchScreen.storyboard */,
@@ -279,6 +284,7 @@
 				CE013B671C9F996E0064EB5D /* ViewController.m in Sources */,
 				CE013B641C9F996E0064EB5D /* AppDelegate.m in Sources */,
 				CE013B611C9F996E0064EB5D /* main.m in Sources */,
+				CE8C39FD1CA147E200993517 /* BasicDraw.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,6 +510,7 @@
 				CE013B8B1C9F996E0064EB5D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE013B8C1C9F996E0064EB5D /* Build configuration list for PBXNativeTarget "week4_forViewTests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +519,7 @@
 				CE013B8E1C9F996E0064EB5D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE013B8F1C9F996E0064EB5D /* Build configuration list for PBXNativeTarget "week4_forViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +528,7 @@
 				CE013B911C9F996E0064EB5D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

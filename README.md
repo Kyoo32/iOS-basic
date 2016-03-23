@@ -16,6 +16,7 @@
 
 * [week4_viewWithCG]agong-ee - 2016. 3. 21 around 22:00
 
-* [week4_Alfago]1_(draft)draw a baduk board and simulate putting a stone - 2016. 3. 23 around 13:40
+* [week4_Alfago]1_(draft)draw a baduk board and simulate putting a stone - 2016. 3. 23 around 13:40<br />
+	2_add a status graph and a guideline - 2016. 3. 23 around 17:20 <br/>
 
 

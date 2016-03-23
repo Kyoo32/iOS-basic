@@ -518,6 +518,7 @@
 				CE9332651CA223DE00BC7207 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE9332661CA223DE00BC7207 /* Build configuration list for PBXNativeTarget "week4_AlfagoTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +527,7 @@
 				CE9332681CA223DE00BC7207 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE9332691CA223DE00BC7207 /* Build configuration list for PBXNativeTarget "week4_AlfagoUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +536,7 @@
 				CE93326B1CA223DE00BC7207 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

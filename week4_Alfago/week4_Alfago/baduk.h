@@ -14,4 +14,6 @@
 @property UIImage *blackStone;
 @property UIImage *whiteStone;
 
+
+
 @end

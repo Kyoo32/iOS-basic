@@ -1,0 +1,541 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CECAE9521CAB5E3A00ED18CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CECAE9511CAB5E3A00ED18CE /* main.m */; };
+		CECAE9551CAB5E3A00ED18CE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CECAE9541CAB5E3A00ED18CE /* AppDelegate.m */; };
+		CECAE9581CAB5E3A00ED18CE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CECAE9571CAB5E3A00ED18CE /* ViewController.m */; };
+		CECAE95B1CAB5E3A00ED18CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CECAE9591CAB5E3A00ED18CE /* Main.storyboard */; };
+		CECAE95D1CAB5E3A00ED18CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CECAE95C1CAB5E3A00ED18CE /* Assets.xcassets */; };
+		CECAE9601CAB5E3A00ED18CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CECAE95E1CAB5E3A00ED18CE /* LaunchScreen.storyboard */; };
+		CECAE96B1CAB5E3A00ED18CE /* week5_cardGameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CECAE96A1CAB5E3A00ED18CE /* week5_cardGameTests.m */; };
+		CECAE9761CAB5E3A00ED18CE /* week5_cardGameUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CECAE9751CAB5E3A00ED18CE /* week5_cardGameUITests.m */; };
+		CECAE9841CAB5F6A00ED18CE /* card_decks in Resources */ = {isa = PBXBuildFile; fileRef = CECAE9831CAB5F6A00ED18CE /* card_decks */; };
+		CECAE9871CAB602A00ED18CE /* sheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = CECAE9861CAB602A00ED18CE /* sheetView.m */; };
+		CECAE98A1CAB60AE00ED18CE /* NXSolitaireCardModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CECAE9891CAB60AE00ED18CE /* NXSolitaireCardModel.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CECAE9671CAB5E3A00ED18CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CECAE9451CAB5E3A00ED18CE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CECAE94C1CAB5E3A00ED18CE;
+			remoteInfo = week5_cardGame;
+		};
+		CECAE9721CAB5E3A00ED18CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CECAE9451CAB5E3A00ED18CE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CECAE94C1CAB5E3A00ED18CE;
+			remoteInfo = week5_cardGame;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CECAE94D1CAB5E3A00ED18CE /* week5_cardGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = week5_cardGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CECAE9511CAB5E3A00ED18CE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CECAE9531CAB5E3A00ED18CE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CECAE9541CAB5E3A00ED18CE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CECAE9561CAB5E3A00ED18CE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CECAE9571CAB5E3A00ED18CE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CECAE95A1CAB5E3A00ED18CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CECAE95C1CAB5E3A00ED18CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CECAE95F1CAB5E3A00ED18CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CECAE9611CAB5E3A00ED18CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CECAE9661CAB5E3A00ED18CE /* week5_cardGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = week5_cardGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CECAE96A1CAB5E3A00ED18CE /* week5_cardGameTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = week5_cardGameTests.m; sourceTree = "<group>"; };
+		CECAE96C1CAB5E3A00ED18CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CECAE9711CAB5E3A00ED18CE /* week5_cardGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = week5_cardGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CECAE9751CAB5E3A00ED18CE /* week5_cardGameUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = week5_cardGameUITests.m; sourceTree = "<group>"; };
+		CECAE9771CAB5E3A00ED18CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CECAE9831CAB5F6A00ED18CE /* card_decks */ = {isa = PBXFileReference; lastKnownFileType = folder; path = card_decks; sourceTree = "<group>"; };
+		CECAE9851CAB602A00ED18CE /* sheetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sheetView.h; sourceTree = "<group>"; };
+		CECAE9861CAB602A00ED18CE /* sheetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sheetView.m; sourceTree = "<group>"; };
+		CECAE9881CAB60AE00ED18CE /* NXSolitaireCardModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NXSolitaireCardModel.h; sourceTree = "<group>"; };
+		CECAE9891CAB60AE00ED18CE /* NXSolitaireCardModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NXSolitaireCardModel.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CECAE94A1CAB5E3A00ED18CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CECAE9631CAB5E3A00ED18CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CECAE96E1CAB5E3A00ED18CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CECAE9441CAB5E3A00ED18CE = {
+			isa = PBXGroup;
+			children = (
+				CECAE94F1CAB5E3A00ED18CE /* week5_cardGame */,
+				CECAE9691CAB5E3A00ED18CE /* week5_cardGameTests */,
+				CECAE9741CAB5E3A00ED18CE /* week5_cardGameUITests */,
+				CECAE94E1CAB5E3A00ED18CE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CECAE94E1CAB5E3A00ED18CE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CECAE94D1CAB5E3A00ED18CE /* week5_cardGame.app */,
+				CECAE9661CAB5E3A00ED18CE /* week5_cardGameTests.xctest */,
+				CECAE9711CAB5E3A00ED18CE /* week5_cardGameUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CECAE94F1CAB5E3A00ED18CE /* week5_cardGame */ = {
+			isa = PBXGroup;
+			children = (
+				CECAE9531CAB5E3A00ED18CE /* AppDelegate.h */,
+				CECAE9541CAB5E3A00ED18CE /* AppDelegate.m */,
+				CECAE9881CAB60AE00ED18CE /* NXSolitaireCardModel.h */,
+				CECAE9891CAB60AE00ED18CE /* NXSolitaireCardModel.m */,
+				CECAE9561CAB5E3A00ED18CE /* ViewController.h */,
+				CECAE9571CAB5E3A00ED18CE /* ViewController.m */,
+				CECAE9851CAB602A00ED18CE /* sheetView.h */,
+				CECAE9861CAB602A00ED18CE /* sheetView.m */,
+				CECAE9591CAB5E3A00ED18CE /* Main.storyboard */,
+				CECAE95C1CAB5E3A00ED18CE /* Assets.xcassets */,
+				CECAE95E1CAB5E3A00ED18CE /* LaunchScreen.storyboard */,
+				CECAE9611CAB5E3A00ED18CE /* Info.plist */,
+				CECAE9501CAB5E3A00ED18CE /* Supporting Files */,
+			);
+			path = week5_cardGame;
+			sourceTree = "<group>";
+		};
+		CECAE9501CAB5E3A00ED18CE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CECAE9831CAB5F6A00ED18CE /* card_decks */,
+				CECAE9511CAB5E3A00ED18CE /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CECAE9691CAB5E3A00ED18CE /* week5_cardGameTests */ = {
+			isa = PBXGroup;
+			children = (
+				CECAE96A1CAB5E3A00ED18CE /* week5_cardGameTests.m */,
+				CECAE96C1CAB5E3A00ED18CE /* Info.plist */,
+			);
+			path = week5_cardGameTests;
+			sourceTree = "<group>";
+		};
+		CECAE9741CAB5E3A00ED18CE /* week5_cardGameUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CECAE9751CAB5E3A00ED18CE /* week5_cardGameUITests.m */,
+				CECAE9771CAB5E3A00ED18CE /* Info.plist */,
+			);
+			path = week5_cardGameUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CECAE94C1CAB5E3A00ED18CE /* week5_cardGame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CECAE97A1CAB5E3A00ED18CE /* Build configuration list for PBXNativeTarget "week5_cardGame" */;
+			buildPhases = (
+				CECAE9491CAB5E3A00ED18CE /* Sources */,
+				CECAE94A1CAB5E3A00ED18CE /* Frameworks */,
+				CECAE94B1CAB5E3A00ED18CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = week5_cardGame;
+			productName = week5_cardGame;
+			productReference = CECAE94D1CAB5E3A00ED18CE /* week5_cardGame.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CECAE9651CAB5E3A00ED18CE /* week5_cardGameTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CECAE97D1CAB5E3A00ED18CE /* Build configuration list for PBXNativeTarget "week5_cardGameTests" */;
+			buildPhases = (
+				CECAE9621CAB5E3A00ED18CE /* Sources */,
+				CECAE9631CAB5E3A00ED18CE /* Frameworks */,
+				CECAE9641CAB5E3A00ED18CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CECAE9681CAB5E3A00ED18CE /* PBXTargetDependency */,
+			);
+			name = week5_cardGameTests;
+			productName = week5_cardGameTests;
+			productReference = CECAE9661CAB5E3A00ED18CE /* week5_cardGameTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CECAE9701CAB5E3A00ED18CE /* week5_cardGameUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CECAE9801CAB5E3A00ED18CE /* Build configuration list for PBXNativeTarget "week5_cardGameUITests" */;
+			buildPhases = (
+				CECAE96D1CAB5E3A00ED18CE /* Sources */,
+				CECAE96E1CAB5E3A00ED18CE /* Frameworks */,
+				CECAE96F1CAB5E3A00ED18CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CECAE9731CAB5E3A00ED18CE /* PBXTargetDependency */,
+			);
+			name = week5_cardGameUITests;
+			productName = week5_cardGameUITests;
+			productReference = CECAE9711CAB5E3A00ED18CE /* week5_cardGameUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CECAE9451CAB5E3A00ED18CE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Lee Kyu-Won";
+				TargetAttributes = {
+					CECAE94C1CAB5E3A00ED18CE = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					CECAE9651CAB5E3A00ED18CE = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = CECAE94C1CAB5E3A00ED18CE;
+					};
+					CECAE9701CAB5E3A00ED18CE = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = CECAE94C1CAB5E3A00ED18CE;
+					};
+				};
+			};
+			buildConfigurationList = CECAE9481CAB5E3A00ED18CE /* Build configuration list for PBXProject "week5_cardGame" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CECAE9441CAB5E3A00ED18CE;
+			productRefGroup = CECAE94E1CAB5E3A00ED18CE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CECAE94C1CAB5E3A00ED18CE /* week5_cardGame */,
+				CECAE9651CAB5E3A00ED18CE /* week5_cardGameTests */,
+				CECAE9701CAB5E3A00ED18CE /* week5_cardGameUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CECAE94B1CAB5E3A00ED18CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CECAE9601CAB5E3A00ED18CE /* LaunchScreen.storyboard in Resources */,
+				CECAE9841CAB5F6A00ED18CE /* card_decks in Resources */,
+				CECAE95D1CAB5E3A00ED18CE /* Assets.xcassets in Resources */,
+				CECAE95B1CAB5E3A00ED18CE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CECAE9641CAB5E3A00ED18CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CECAE96F1CAB5E3A00ED18CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CECAE9491CAB5E3A00ED18CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CECAE9581CAB5E3A00ED18CE /* ViewController.m in Sources */,
+				CECAE9551CAB5E3A00ED18CE /* AppDelegate.m in Sources */,
+				CECAE98A1CAB60AE00ED18CE /* NXSolitaireCardModel.m in Sources */,
+				CECAE9871CAB602A00ED18CE /* sheetView.m in Sources */,
+				CECAE9521CAB5E3A00ED18CE /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CECAE9621CAB5E3A00ED18CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CECAE96B1CAB5E3A00ED18CE /* week5_cardGameTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CECAE96D1CAB5E3A00ED18CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CECAE9761CAB5E3A00ED18CE /* week5_cardGameUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CECAE9681CAB5E3A00ED18CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CECAE94C1CAB5E3A00ED18CE /* week5_cardGame */;
+			targetProxy = CECAE9671CAB5E3A00ED18CE /* PBXContainerItemProxy */;
+		};
+		CECAE9731CAB5E3A00ED18CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CECAE94C1CAB5E3A00ED18CE /* week5_cardGame */;
+			targetProxy = CECAE9721CAB5E3A00ED18CE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CECAE9591CAB5E3A00ED18CE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CECAE95A1CAB5E3A00ED18CE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CECAE95E1CAB5E3A00ED18CE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CECAE95F1CAB5E3A00ED18CE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CECAE9781CAB5E3A00ED18CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CECAE9791CAB5E3A00ED18CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CECAE97B1CAB5E3A00ED18CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				INFOPLIST_FILE = week5_cardGame/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "next16.week5-cardGame";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		CECAE97C1CAB5E3A00ED18CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				INFOPLIST_FILE = week5_cardGame/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "next16.week5-cardGame";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
+		CECAE97E1CAB5E3A00ED18CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = week5_cardGameTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "next16.week5-cardGameTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/week5_cardGame.app/week5_cardGame";
+			};
+			name = Debug;
+		};
+		CECAE97F1CAB5E3A00ED18CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = week5_cardGameTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "next16.week5-cardGameTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/week5_cardGame.app/week5_cardGame";
+			};
+			name = Release;
+		};
+		CECAE9811CAB5E3A00ED18CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = week5_cardGameUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "next16.week5-cardGameUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = week5_cardGame;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		CECAE9821CAB5E3A00ED18CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = week5_cardGameUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "next16.week5-cardGameUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = week5_cardGame;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CECAE9481CAB5E3A00ED18CE /* Build configuration list for PBXProject "week5_cardGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CECAE9781CAB5E3A00ED18CE /* Debug */,
+				CECAE9791CAB5E3A00ED18CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CECAE97A1CAB5E3A00ED18CE /* Build configuration list for PBXNativeTarget "week5_cardGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CECAE97B1CAB5E3A00ED18CE /* Debug */,
+				CECAE97C1CAB5E3A00ED18CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CECAE97D1CAB5E3A00ED18CE /* Build configuration list for PBXNativeTarget "week5_cardGameTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CECAE97E1CAB5E3A00ED18CE /* Debug */,
+				CECAE97F1CAB5E3A00ED18CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CECAE9801CAB5E3A00ED18CE /* Build configuration list for PBXNativeTarget "week5_cardGameUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CECAE9811CAB5E3A00ED18CE /* Debug */,
+				CECAE9821CAB5E3A00ED18CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CECAE9451CAB5E3A00ED18CE /* Project object */;
+}

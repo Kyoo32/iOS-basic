@@ -19,4 +19,6 @@
 * [week4_Alfago]<br />1_(draft)draw a baduk board and simulate putting a stone - 2016. 3. 23 around 13:40<br />
 	2_add a status graph and a guideline - 2016. 3. 23 around 17:20 <br/>
 
+* [week5_cardGame]<br />practice Manual Memory Management - 2016. 3. 30 around 13:40<br />
+
 

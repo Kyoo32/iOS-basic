@@ -54,6 +54,7 @@
 
 -(void)shuffleCards{
     
+        
     [self.userBucket removeAllObjects];
     [self.gameStack removeAllObjects];
     
@@ -61,15 +62,15 @@
     NSString *temp;
     NSMutableDictionary *tempDic;
     
-    NSLog(@"HELlo 1");
+    //NSLog(@"HELlo 1");
     int randNum;
     int count = 0;
     while(count < 24){
-        NSLog(@"HELlo 2");
+       // NSLog(@"HELlo 2");
         while(true){ //다른 방법 : Set
             randNum = arc4random_uniform(52);
             tempArray = [self.cardResource[randNum] allValues];
-            NSLog(@"%@", tempArray);
+         //   NSLog(@"%@", tempArray);
             if([[tempArray firstObject] isEqualToNumber: @0]){
                 break;
             }
@@ -77,7 +78,7 @@
         
     
         temp = [[self.cardResource[randNum] allKeys] firstObject];
-        NSLog(@"%@", temp);
+       // NSLog(@"%@", temp);
         
         [self.userBucket addObject: temp];
         
@@ -94,11 +95,11 @@
         int breakPoint = count + i;
             
         while(count < breakPoint){
-            NSLog(@"HELlo 3");
+         //   NSLog(@"HELlo 3");
             while(true){ //다른 방법 : Set
                 randNum = arc4random_uniform(52);
                 tempArray = [self.cardResource[randNum] allValues];
-                NSLog(@"%@", tempArray);
+           //     NSLog(@"%@", tempArray);
                 
                 if([[tempArray firstObject] isEqualToNumber: @0]){
                     break;
@@ -119,8 +120,7 @@
         [self.gameStack insertObject:innerArray atIndex:(i-1)];
         [innerArray release];
     }
-    
-    
+       
     for(int i = 0 ; i < 52 ; i++){
         temp = [[self.cardResource[i] allKeys] firstObject];
         tempDic = self.cardResource[i];

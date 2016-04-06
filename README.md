@@ -21,4 +21,7 @@
 
 * [week5_cardGame]<br />practice Manual Memory Management - 2016. 3. 30 around 13:40<br />
 
+* [week6_tableDelegation] just look up
+
+* week6 : [week5_cardGame] study an app-life cycle, and practice data-saving, localization - 2016. 4. 6 around 13:40 <br/>
 

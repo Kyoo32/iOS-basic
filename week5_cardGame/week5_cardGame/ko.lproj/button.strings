@@ -1,0 +1,11 @@
+/* 
+  button.strings
+  week5_cardGame
+
+  Created by Lee Kyu-Won on 4/6/16.
+  Copyright © 2016 Lee Kyu-Won. All rights reserved.
+*/
+
+
+"btn" = "랜덤";
+"cardPath" = "card_decks_kr/%@";

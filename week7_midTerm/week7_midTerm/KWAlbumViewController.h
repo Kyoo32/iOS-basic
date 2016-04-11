@@ -18,7 +18,7 @@
 @property KWAlbumModel *dataModel;
 
 - (IBAction)sortByDate:(id)sender;
-
 -(void)tableReload;
+-(void)tableReloadWithResetData;
 
 @end

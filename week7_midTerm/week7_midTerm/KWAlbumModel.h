@@ -12,5 +12,10 @@
 
 @property NSMutableArray *intialArray;
 @property NSMutableArray *albumArray;
+@property NSMutableArray *yearCountBucket;
+@property int countYear;
+
+-(void)setCountYear;
+-(void)setYearCountBucket;
 
 @end

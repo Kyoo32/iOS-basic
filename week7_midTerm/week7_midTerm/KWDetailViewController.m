@@ -16,7 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    _titleLabel.text =[_clickedItem valueForKey:@"title"];
+    _imageDetail.image = [UIImage imageNamed:[_clickedItem valueForKey:@"image"]];
+    _detailLabel.text = [_clickedItem valueForKey:@"date"];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -25,10 +28,10 @@
 }
 
 
--(void)setDetailItem:(NSArray*)item{
-    _titleLabel.text = [item valueForKey:@"title"];
-    _imageDetail.image = [UIImage imageNamed:[item valueForKey:@"image"]];
-    _detailLabel.text = [item valueForKey:@"date"];
+-(void)setDetailItem:(NSDictionary*)item{
+    NSLog(@"SETting");
+    
+    _clickedItem = item;
 }
 
 @end

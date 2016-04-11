@@ -10,7 +10,7 @@
 
 @interface KWAlbumModel : NSObject
 
-
+@property NSMutableArray *intialArray;
 @property NSMutableArray *albumArray;
 
 @end

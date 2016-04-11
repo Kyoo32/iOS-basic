@@ -10,12 +10,15 @@
 
 @interface KWDetailViewController : UIViewController
 
+
+@property NSDictionary *clickedItem;
+
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *imageDetail;
 @property (weak, nonatomic) IBOutlet UILabel *detailLabel;
 
 
 
--(void)setDetailItem:(NSArray*)item;
+-(void)setDetailItem:(NSDictionary*)item;
 @end
 

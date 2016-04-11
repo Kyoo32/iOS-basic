@@ -16,7 +16,8 @@
 @property (strong, nonatomic) IBOutlet KWTableView *tableView;
 
 @property KWAlbumModel *dataModel;
-//@property KWTableView *tableView;
+
+- (IBAction)sortByDate:(id)sender;
 
 -(void)tableReload;
 

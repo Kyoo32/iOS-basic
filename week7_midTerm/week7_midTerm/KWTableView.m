@@ -11,6 +11,12 @@
 @implementation KWTableView
 
 
+-(void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event{
+    
+    if(event.type == UIEventTypeMotion){
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"resetArray" object:nil];
+    }
+}
 
 
 

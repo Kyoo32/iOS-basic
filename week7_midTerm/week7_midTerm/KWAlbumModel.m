@@ -16,7 +16,10 @@
     self = [super init];
     
     if (self){
+        
+        
         _albumArray = [NSMutableArray alloc];
+        _intialArray = [NSMutableArray alloc];
         
         NSLog(@"##### %@", [[NSBundle mainBundle] pathForResource:@"album" ofType:@"json"]);
         
@@ -29,14 +32,22 @@
             // NSLog(@"%@", jsonData);
         }
         
-        _albumArray = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:NULL];
+        _intialArray = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:NULL];
         
-        NSLog(@"\n\n\n !!! : %@", _albumArray);
+        NSLog(@"\n\n\n !!! : %@",_intialArray);
         
+        _albumArray = _intialArray;
         [[NSNotificationCenter defaultCenter] postNotificationName:@"dataSet" object:self];
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(resetArray) name:@"resetArray" object:nil];
             
     }
     return self;
+}
+
+-(void)resetArray{
+    _albumArray =_intialArray;
+         [[NSNotificationCenter defaultCenter] postNotificationName:@"dataSet" object:self];
 }
 
 @end

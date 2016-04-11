@@ -17,10 +17,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tableReload) name:@"dataSet" object:_dataModel];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tableReload) name:@"sortByDate" object:_dataModel];
     _dataModel = [[KWAlbumModel alloc] init];
     
-    //_tableView = [[KWTableView alloc]init];
-    //[_tableView setDelegate:self];
+   
     [_tableView setDataSource:self];
     //[_tableView registerClass:[KWTableViewCell class] forCellReuseIdentifier:@"Cell"];
     
@@ -46,7 +46,9 @@
     NSLog(@"CELL :: %@",cell);
     NSLog(@"CELL  title :: %@",cell.titleLabel);
     
+    
     cell.backgroundView = [[UIImageView alloc] initWithImage: [UIImage imageNamed:[_dataModel.albumArray[indexPath.row] valueForKey:@"image" ]]];
+    cell.backgroundView.contentMode =  UIViewContentModeCenter;
     
     
     //cell.backgroundColor = [UIImage imageNamed:@"01"];
@@ -58,24 +60,39 @@
 
 
 
+- (IBAction)sortByDate:(id)sender {
+    
+    NSSortDescriptor *dateSorter = [[NSSortDescriptor alloc] initWithKey:@"date" ascending:YES];
+    NSArray *sortDescriptors = [NSArray arrayWithObject:dateSorter];
+    NSMutableArray *sortedArray = [_dataModel.albumArray mutableCopy];
+    [sortedArray sortUsingDescriptors:sortDescriptors];
+    
+    NSLog(@"Sorted!! : %@", sortedArray);
+    _dataModel.albumArray = sortedArray;
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"sortByDate" object:nil];
+}
+
 -(void)tableReload{
     NSLog(@"reload!!!!");
+    [self.tableView reloadData];
 }
 
 
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+     NSLog(@"\n\nhello1");
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         
-        NSLog(@"\n\nhello");
+        NSLog(@"\n\nhello2");
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        KWDetailViewController *controller = (KWDetailViewController *)[[segue destinationViewController] topViewController];
+        KWDetailViewController *controller = (KWDetailViewController *)[segue destinationViewController] ;
         
         NSLog(@"passing %@",  _dataModel.albumArray[indexPath.row]);
         [controller setDetailItem: _dataModel.albumArray[indexPath.row]];
-                                                                             
-        //controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
-//        controller.navigationItem.leftItemsSupplementBackButton = YES;
+        
+        
     }
 }
 

@@ -1,5 +1,5 @@
 //
-//  KWTableViewCell.h
+//  ViewController.h
 //  week7_midTerm
 //
 //  Created by Lee Kyu-Won on 4/11/16.
@@ -8,8 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface KWTableViewCell : UITableViewCell
+@interface KWDetailViewController : UIViewController
+
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *imageDetail;
 @property (weak, nonatomic) IBOutlet UILabel *detailLabel;
 
+
+
+-(void)setDetailItem:(NSArray*)item;
 @end
+

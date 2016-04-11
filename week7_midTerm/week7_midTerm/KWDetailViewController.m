@@ -6,13 +6,13 @@
 //  Copyright © 2016 Lee Kyu-Won. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "KWDetailViewController.h"
 
-@interface ViewController ()
+@interface KWDetailViewController ()
 
 @end
 
-@implementation ViewController
+@implementation KWDetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -22,6 +22,13 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+-(void)setDetailItem:(NSArray*)item{
+    _titleLabel.text = [item valueForKey:@"title"];
+    _imageDetail.image = [UIImage imageNamed:[item valueForKey:@"image"]];
+    _detailLabel.text = [item valueForKey:@"date"];
 }
 
 @end

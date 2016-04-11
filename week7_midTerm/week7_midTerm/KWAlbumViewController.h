@@ -9,12 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "KWAlbumModel.h"
 #import "KWTableView.h"
+#import "KWTableViewCell.h"
+#import "KWDetailViewController.h"
 
-
-@interface KWAlbumViewController : UIViewController
+@interface KWAlbumViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@property (strong, nonatomic) IBOutlet KWTableView *tableView;
 
 @property KWAlbumModel *dataModel;
-@property KWTableView *tableView;
+//@property KWTableView *tableView;
 
 -(void)tableReload;
 

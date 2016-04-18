@@ -28,3 +28,5 @@
 * [week7_midterm]<br />1_until class time - 2016. 4. 11 around 13:10<br />
 	2_upto basic mission - 2016. 4. 11 around 14:40 <br />
 	3_upto Bonus mission - 2016. 4. 11 around 19:50 <br />
+
+* week8 : [week7_midterm] practice Networking - 2016. 4. 18 around 15:20

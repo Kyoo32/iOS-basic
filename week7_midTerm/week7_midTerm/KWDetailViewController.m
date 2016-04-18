@@ -17,7 +17,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _titleLabel.text =[_clickedItem valueForKey:@"title"];
+    /*
+    //1.
     _imageDetail.image = [UIImage imageNamed:[_clickedItem valueForKey:@"image"]];
+    */
+    //2
+    
+    NSString *baseString = @"http://125.209.194.123/demo/";
+    NSURL *url = [NSURL URLWithString:[baseString stringByAppendingString:[_clickedItem valueForKey:@"image"]]];
+    _imageDetail.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:url]];
     _detailLabel.text = [_clickedItem valueForKey:@"date"];
 
 }

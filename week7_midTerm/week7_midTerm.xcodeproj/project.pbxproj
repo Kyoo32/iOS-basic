@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CEB27E231CC48C3500A78ADD /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB27E221CC48C3500A78ADD /* Reachability.m */; };
 		CECDF1F21CBB328A0065F028 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CECDF1F11CBB328A0065F028 /* main.m */; };
 		CECDF1F51CBB328A0065F028 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CECDF1F41CBB328A0065F028 /* AppDelegate.m */; };
 		CECDF1F81CBB328A0065F028 /* KWDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CECDF1F71CBB328A0065F028 /* KWDetailViewController.m */; };
@@ -62,6 +63,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CEB27E211CC48C3500A78ADD /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		CEB27E221CC48C3500A78ADD /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		CECDF1ED1CBB328A0065F028 /* week7_midTerm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = week7_midTerm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CECDF1F11CBB328A0065F028 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CECDF1F31CBB328A0065F028 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -161,6 +164,8 @@
 			children = (
 				CECDF1F31CBB328A0065F028 /* AppDelegate.h */,
 				CECDF1F41CBB328A0065F028 /* AppDelegate.m */,
+				CEB27E211CC48C3500A78ADD /* Reachability.h */,
+				CEB27E221CC48C3500A78ADD /* Reachability.m */,
 				CECDF1F61CBB328A0065F028 /* KWDetailViewController.h */,
 				CECDF1F71CBB328A0065F028 /* KWDetailViewController.m */,
 				CECDF22F1CBB364D0065F028 /* KWAlbumModel.h */,
@@ -384,6 +389,7 @@
 			files = (
 				CECDF23C1CBB44A10065F028 /* KWTableViewCell.m in Sources */,
 				CECDF1F81CBB328A0065F028 /* KWDetailViewController.m in Sources */,
+				CEB27E231CC48C3500A78ADD /* Reachability.m in Sources */,
 				CECDF1F51CBB328A0065F028 /* AppDelegate.m in Sources */,
 				CECDF22E1CBB35EF0065F028 /* KWTableView.m in Sources */,
 				CECDF2311CBB364D0065F028 /* KWAlbumModel.m in Sources */,

@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "week7_midTerm/KWAlbumModel.m"
-            timestampString = "482058703.110588"
+            timestampString = "482644931.945417"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
             landmarkName = "-setCountYear"
             landmarkType = "5">
          </BreakpointContent>

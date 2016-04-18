@@ -8,8 +8,11 @@
 
 #import "KWAlbumViewController.h"
 
-@interface KWAlbumViewController (){
+
+@interface KWAlbumViewController ()<NSURLConnectionDataDelegate>{
     int sortBy; //0 is basic, 1 is by date.
+    NSMutableData *imageData;
+    UIImage *finishedImage;
 }
 @end
 
@@ -17,22 +20,34 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tableReload) name:@"dataSet" object:_dataModel];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tableReloadWithResetData) name:@"dataReset" object:_dataModel];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tableReload) name:@"sortByDate" object:_dataModel];
+    
+    imageData = [[NSMutableData alloc] init];
+    
+    
     _dataModel = [[KWAlbumModel alloc] init];
     sortBy = 0;
    
     [_tableView setDataSource:self];
     [_tableView setDelegate:self];
     //[_tableView registerClass:[KWTableViewCell class] forCellReuseIdentifier:@"Cell"];
-    
-    NSLog(@"TABLE VIEW : %@", _tableView);
 }
 
 
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection{
+    NSLog(@"finish");
+    finishedImage = [UIImage imageWithData:imageData];
+    
+};
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data{
+    [imageData appendData:data];
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    NSLog(@"CAAALLLLL MEEEE");
+    //NSLog(@"CAAALLLLL MEEEE");
     if(!sortBy){
         return 1;
     } else {
@@ -40,6 +55,9 @@
     }
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
@@ -47,7 +65,7 @@
     if(!sortBy) {
         return [_dataModel.albumArray count];
     } else {
-        NSLog(@"\n\nhow many:  %ld\n\n", [[_dataModel.yearCountBucket[section] valueForKey:@"count"]integerValue]);
+        //NSLog(@"\n\nhow many:  %ld\n\n", [[_dataModel.yearCountBucket[section] valueForKey:@"count"]integerValue]);
         return [[_dataModel.yearCountBucket[section] valueForKey:@"count"]integerValue];
     }
 }
@@ -56,7 +74,7 @@
 -(UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     if(!sortBy) return (UIView*)NULL;
     
-    NSLog(@"\n\n\nzzzzzzzzzzzzzzzzzz\n\n\n\n");
+    //NSLog(@"\n\n\nzzzzzzzzzzzzzzzzzz\n\n\n\n");
     // 1. The view for the header
     UIView* headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 22)];
     
@@ -90,13 +108,39 @@
     //NSLog(@"CELL  title :: %@",cell.titleLabel);
     
     if(!sortBy){
-        cell.backgroundView = [[UIImageView alloc] initWithImage: [UIImage imageNamed:[_dataModel.albumArray[indexPath.row] valueForKey:@"image" ]]];
-       
+        
+        //1.
+        //cell.backgroundView = [[UIImageView alloc] initWithImage: [UIImage imageNamed:[_dataModel.albumArray[indexPath.row] valueForKey:@"image" ]]];
+        
+        NSString *baseString = @"http://125.209.194.123/demo/";
+        NSURL *url = [NSURL URLWithString:[baseString stringByAppendingString:[_dataModel.albumArray[indexPath.row] valueForKey:@"image"]]];
+        /*
+        //2.
+        NSURLRequest *request = [[NSURLRequest alloc]initWithURL:url];
+        NSURLConnection *connect = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+        cell.backgroundView = [[UIImageView alloc] initWithImage:finishedImage];
+       */
+        //3.
+        cell.backgroundView = [[UIImageView alloc] initWithImage: [UIImage imageWithData:[NSData dataWithContentsOfURL:url]]];
+        
+        
+        
         cell.titleLabel.text = [NSString stringWithFormat:@"%@" , [_dataModel.albumArray[indexPath.row] valueForKey:@"title"]];
         cell.detailLabel.text = [NSString stringWithFormat:@"%@" , [_dataModel.albumArray[indexPath.row] valueForKey:@"date"]];
     } else {
         NSString *kRow = [NSString stringWithFormat:@"%ld" ,(long)indexPath.row ];
+        
+        
+        /*
+        //1.
         cell.backgroundView =[[UIImageView alloc] initWithImage: [UIImage imageNamed:[[_dataModel.yearCountBucket[indexPath.section] valueForKey: kRow] valueForKey: @"image"]]];
+        */
+        //2.
+        NSString *baseString = @"http://125.209.194.123/demo/";
+        NSURL *url = [NSURL URLWithString:[baseString stringByAppendingString:[[_dataModel.yearCountBucket[indexPath.section] valueForKey: kRow] valueForKey: @"image"]]];
+        cell.backgroundView = [[UIImageView alloc] initWithImage: [UIImage imageWithData:[NSData dataWithContentsOfURL:url]]];
+        
+        
         cell.titleLabel.text = [NSString stringWithFormat:@"%@" , [[_dataModel.yearCountBucket[indexPath.section] valueForKey:kRow] valueForKey:@"title"]];
         cell.detailLabel.text = [NSString stringWithFormat:@"%@" , [[_dataModel.yearCountBucket[indexPath.section] valueForKey:kRow]  valueForKey:@"date"]];
         
@@ -155,8 +199,6 @@
         
     }
 }
-
-
 
 
 

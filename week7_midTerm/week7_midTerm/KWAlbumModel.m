@@ -7,9 +7,25 @@
 //
 
 #import "KWAlbumModel.h"
+#import "Reachability.h"
+
+
+NSInteger intSort(id num1, id num2, void *context)
+{
+    int v1 = [num1 intValue];
+    int v2 = [num2 intValue];
+    if (v1 < v2)
+        return NSOrderedAscending;
+    else if (v1 > v2)
+        return NSOrderedDescending;
+    else
+        return NSOrderedSame;
+}
+
 
 @implementation KWAlbumModel{
     NSMutableSet<NSString*> *uniqueYearSet;
+    Reachability *wifiReachability;
 }
 
 -(instancetype)init{
@@ -18,15 +34,34 @@
     
     if (self){
         uniqueYearSet = [[NSMutableSet alloc]init];
+        wifiReachability = [Reachability reachabilityForLocalWiFi];
         
         _albumArray = [NSMutableArray alloc];
         _intialArray = [NSMutableArray alloc];
         
-        NSLog(@"##### %@", [[NSBundle mainBundle] pathForResource:@"album" ofType:@"json"]);
+        NSData *jsonData;
         
-        NSData *jsonData = [[NSData alloc] initWithContentsOfFile: [[NSBundle mainBundle] pathForResource:@"album" ofType:@"json"] ];
+
         
-        NSLog(@"%@", jsonData);
+        if( [wifiReachability currentReachabilityStatus] > 0){
+            NSString *urlString = @"http://125.209.194.123/json.php";
+        NSURL *url = [[NSURL alloc] initWithString:urlString];
+        NSURLResponse *response = [[NSURLResponse alloc] initWithURL:url MIMEType:@"text/plain" expectedContentLength:NULL textEncodingName: NULL];
+        
+
+         jsonData= [NSURLConnection sendSynchronousRequest:[NSURLRequest requestWithURL:url] returningResponse:&response error:NULL];
+        
+        
+        
+        NSLog(@"NETWORK : %@", jsonData);
+        } else {
+        
+            NSLog(@"##### %@", [[NSBundle mainBundle] pathForResource:@"album" ofType:@"json"]);
+
+           jsonData = [[NSData alloc] initWithContentsOfFile: [[NSBundle mainBundle] pathForResource:@"album" ofType:@"json"] ];
+            NSLog(@"%@", jsonData);
+        }
+        
         if(jsonData){
             NSError *error = NULL;
             NSLog(@"???%@",[NSJSONSerialization JSONObjectWithData:jsonData options:0 error: &error]);
@@ -69,7 +104,12 @@
 }
 
 -(void)setYearCountBucket{
-    NSEnumerator *setEnumerator = (NSString*)[uniqueYearSet objectEnumerator];
+    NSArray *yearSorted = [uniqueYearSet allObjects];
+    yearSorted = [yearSorted sortedArrayUsingFunction:intSort context:nil];
+    NSLog(@"YEAR sorted : %@" , yearSorted);
+   
+    
+    NSEnumerator *setEnumerator = (NSString*)[yearSorted objectEnumerator];
     NSString *kYear;
     int i = 0;
     
@@ -83,6 +123,7 @@
         NSString *kYear =  [[_albumArray[i]valueForKey:@"date"] substringToIndex:4];
         NSLog(@"world");
         NSEnumerator *yearEnumerator = [_yearCountBucket objectEnumerator];
+        
         while( object = [yearEnumerator nextObject]){
             if( [[object valueForKey:@"year"] isEqualToString:kYear]){
                 int rowNum = (int)[[object valueForKey:@"count"] integerValue];
@@ -90,9 +131,9 @@
                 [object setValue:_albumArray[i] forKey: [NSString stringWithFormat:@"%d", rowNum]];
             }
         }
-    
-    NSLog(@"yearBucket : %@", _yearCountBucket);
     }
+    
+    NSLog(@"year bucket : %@",_yearCountBucket);
 }
 
 @end

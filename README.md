@@ -29,4 +29,5 @@
 	2_upto basic mission - 2016. 4. 11 around 14:40 <br />
 	3_upto Bonus mission - 2016. 4. 11 around 19:50 <br />
 
-* week8 : [week7_midterm] practice Networking - 2016. 4. 18 around 15:20
+* week8 : [week7_midterm] practice Networking - 2016. 4. 18 around 15:20<br />
+    [week8_CFStreamCam] practice CFStream -2016. 4. 20 around 13:30 

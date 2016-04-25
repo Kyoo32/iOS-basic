@@ -31,3 +31,7 @@
 
 * week8 : [week7_midterm] practice Networking - 2016. 4. 18 around 15:20<br />
     [week8_CFStreamCam] practice CFStream -2016. 4. 20 around 13:30 
+
+* [week9_block] practice block & queue - 2016. 4. 25 around 14:10
+
+ 	 ##### NEED to understand why 'This application is modifying the autolayout engine from a background thread, which can lead to engine corruption and weird crashes.' comes in log. 

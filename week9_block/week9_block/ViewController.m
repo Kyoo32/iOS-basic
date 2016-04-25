@@ -17,17 +17,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-   // [_firstBtn addTarget:self action:@selector(btnClicked) forControlEvents:NULL];
-    
     
 }
 
 - (IBAction)bookButtonClicked:(id)sender {
     _progressBar.progress = 0;
     dispatch_queue_t aQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-    //dispatch_queue_create(NULL, nil);
+    //dispatch_queue_create(NULL, nil); -> global_queue와 결과 같음흠
     
-    //or dispatch_get_main_queue();
+    //or dispatch_get_main_queue(); -> 진행상태가 눈으로 확인하지 못할 만큼 빠름.
     dispatch_async(aQueue, ^{
         [self workingProgress];
     });

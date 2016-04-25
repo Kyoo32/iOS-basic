@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3bC-M0-YaJ">
+                                <rect key="frame" x="90" y="50" width="200" height="150"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="S0W-4k-C7Y"/>
+                                    <constraint firstAttribute="width" constant="200" id="byI-UE-nrU"/>
+                                </constraints>
+                                <state key="normal" title="firstButton"/>
+                                <connections>
+                                    <action selector="firstBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uyf-0u-SBR"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ICX-1g-32c">
+                                <rect key="frame" x="75" y="350" width="150" height="2"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="NKT-ri-bnC"/>
+                                    <constraint firstAttribute="width" constant="150" id="WxU-g6-dRL"/>
+                                </constraints>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N3o-49-e74">
+                                <rect key="frame" x="83" y="238" width="35" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="VSY-kh-YRy"/>
+                                    <constraint firstAttribute="width" constant="35" id="bIW-7F-dQt"/>
+                                </constraints>
+                                <state key="normal" title="Read"/>
+                                <connections>
+                                    <action selector="bookButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f1J-LM-eld"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ICX-1g-32c" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="330" id="9Vm-tA-mmV"/>
+                            <constraint firstItem="ICX-1g-32c" firstAttribute="top" secondItem="N3o-49-e74" secondAttribute="bottom" constant="62" id="K2w-yd-pRz"/>
+                            <constraint firstItem="N3o-49-e74" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="238" id="Pp2-ln-HRo"/>
+                            <constraint firstItem="3bC-M0-YaJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="70" id="ZzI-VD-ptI"/>
+                            <constraint firstItem="N3o-49-e74" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="100" id="amO-Jl-MmU"/>
+                            <constraint firstItem="3bC-M0-YaJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="fAl-O3-mZF"/>
+                            <constraint firstItem="ICX-1g-32c" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="55" id="igh-Gr-5ui"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="N3o-49-e74" secondAttribute="bottom" constant="312" id="kmU-XU-lVq"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="K2w-yd-pRz"/>
+                                <exclude reference="kmU-XU-lVq"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="firstBtn" destination="3bC-M0-YaJ" id="wuJ-3L-w38"/>
+                        <outlet property="heightC" destination="S0W-4k-C7Y" id="ogg-8a-z0R"/>
+                        <outlet property="leadingC" destination="ZzI-VD-ptI" id="yzD-vN-2k3"/>
+                        <outlet property="progressBar" destination="ICX-1g-32c" id="3sS-SP-1pm"/>
+                        <outlet property="topC" destination="fAl-O3-mZF" id="R5x-44-0lb"/>
+                        <outlet property="widthC" destination="byI-UE-nrU" id="dbi-0N-KCb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

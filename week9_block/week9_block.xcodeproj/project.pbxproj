@@ -502,6 +502,7 @@
 				CE87EC451CCDBD5600329E16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE87EC461CCDBD5600329E16 /* Build configuration list for PBXNativeTarget "week9_blockTests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +511,7 @@
 				CE87EC481CCDBD5600329E16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE87EC491CCDBD5600329E16 /* Build configuration list for PBXNativeTarget "week9_blockUITests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +520,7 @@
 				CE87EC4B1CCDBD5600329E16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

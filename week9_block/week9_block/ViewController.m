@@ -8,7 +8,11 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController (){
+    NSArray *object;
+    NSString *bookfile;
+    int length;
+}
 
 @end
 
@@ -17,27 +21,134 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+    NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://125.209.194.123/wordlist.php"]];
+    object = [NSJSONSerialization JSONObjectWithData:data options:NULL error:NULL];
+  
+    bookfile = [NSString stringWithContentsOfFile:[[NSBundle mainBundle]
+                                                   pathForResource:@"bookfile" ofType:@".txt"] encoding:NSUTF8StringEncoding error:nil];
+    length = bookfile.length;
+
 }
 
 - (IBAction)bookButtonClicked:(id)sender {
     _progressBar.progress = 0;
     dispatch_queue_t aQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-    //dispatch_queue_create(NULL, nil); -> global_queue와 결과 같음흠
-    
-    //or dispatch_get_main_queue(); -> 진행상태가 눈으로 확인하지 못할 만큼 빠름.
     dispatch_async(aQueue, ^{
-        [self workingProgress];
+       //[self workingProgress];
+        [self countSearchingString:@"주식"];
+        [self countWordSet];
+        [self countAllWord];
     });
+}
 
+-(void)showAlertWithMessage:(NSString*)message{
+
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [[[UIAlertView alloc] initWithTitle:@"완료"
+                                    message:message
+                                   delegate:nil
+                          cancelButtonTitle:@"OK"
+                          otherButtonTitles:nil, nil] show];
+        
+    });
+}
+
+-(void)countAllWord{
+    NSString *strippedString = [bookfile stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    
+    // break up the search terms (separated by spaces)
+    NSArray *searchItems = nil;
+    if (strippedString.length > 0) {
+        searchItems = [strippedString componentsSeparatedByString:@" "];
+    }
+    
+    [self showAlertWithMessage:[NSString stringWithFormat:@"전체 단어 갯수: %lu", (unsigned long)[searchItems count]]];
+}
+
+-(void)countWordSet{
+    
+    NSMutableSet *wordSet = [NSMutableSet set];
+    for(int i = 0; i < [object count] ; i++){
+        [wordSet addObject:object[i]];
+    }
+    NSArray *wordSetArray = [wordSet allObjects];
+    //NSLog(@"%@",wordSetArray);
+    int setCount = [wordSetArray count];
+    NSMutableArray *wordCountBucket = [[NSMutableArray alloc]initWithCapacity:setCount];
+    
+    for(int i=0; i<setCount ; i++){
+        [wordCountBucket insertObject:@0 atIndex:i];
+    }
+    
+    NSOperationQueue *queueForCountingWordSet = [[NSOperationQueue alloc]init];
+    for(int i = 0; i < setCount; i++){
+        NSString *exceptNewlineString = [wordSetArray[i] stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+        
+        int searchinglength = exceptNewlineString.length;
+
+        [queueForCountingWordSet addOperationWithBlock:^{
+            NSString *aChar;
+
+            for (int nLoop=0; nLoop< length - searchinglength; nLoop++) {
+                aChar = [bookfile substringWithRange:NSMakeRange(nLoop, searchinglength)];
+                if([aChar isEqualToString:exceptNewlineString]) [wordCountBucket replaceObjectAtIndex:i withObject: [NSNumber numberWithInteger: ([[wordCountBucket objectAtIndex:i ] integerValue] + 1)]];
+
+            }
+        
+         }];
+    }
+    
+    [queueForCountingWordSet waitUntilAllOperationsAreFinished];
+    int bigIndex = 0, smallIndex = 0;
+    for(int i = 0; i < setCount ; i++){
+        if(wordCountBucket[i] > wordCountBucket[bigIndex]) bigIndex = i;
+        if(wordCountBucket[i] < wordCountBucket[smallIndex]) smallIndex = i;
+    }
+   
+    NSLog(@"%@",wordCountBucket);
+    
+    [self showAlertWithMessage:[NSString stringWithFormat:@"제일 많은 단어(%@) : %@개\n제일 적은 단어(%@) : %@개",wordSetArray[bigIndex], wordCountBucket[bigIndex],wordSetArray[smallIndex], wordCountBucket[smallIndex]]];
+    
 }
 
 
 
+-(void)countSearchingString:(NSString*)searchingString {
+    
+    int count = 0;
+    // strip out all the leading and trailing spaces
+    NSString *exceptNewlineString = [searchingString stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+        
+    int searchinglength = exceptNewlineString.length;
+
+    float progress = 0;
+    
+    
+    //방법1
+    NSRegularExpression *rxp = [[NSRegularExpression alloc]initWithPattern:exceptNewlineString options:NULL error:nil];
+    
+    count = [rxp numberOfMatchesInString:bookfile options:NULL range:NSMakeRange(0, length)];
+    
+    //방법2
+//    NSString *aChar;
+//    for (int nLoop=0; nLoop< length - searchinglength; nLoop++) {
+//        aChar = [bookfile substringWithRange:NSMakeRange(nLoop, searchinglength)];
+//        if([aChar isEqualToString:exceptNewlineString]) count++;
+//        progress = (float)nLoop / (float)length;
+//        
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            _progressBar.progress = progress;
+//        });
+//    }
+    
+    [self showAlertWithMessage:[NSString stringWithFormat:@"%@ 갯수: %d개",searchingString,count]];
+}
+
+
+
+
 -(void)workingProgress {
-    NSString *bookfile = [NSString stringWithContentsOfFile:[[NSBundle mainBundle]
-                                                             pathForResource:@"bookfile" ofType:@".txt"] encoding:NSUTF8StringEncoding error:nil];
-    int length = bookfile.length;
+    
     int spaceCount = 0;
     float progress = 0;
     unichar aChar;
@@ -46,16 +157,11 @@
         if (aChar==' ') spaceCount++;
         progress = (float)nLoop / (float)length;
 
-            dispatch_async(dispatch_get_main_queue(), ^{
-                    _progressBar.progress = progress;
-            });
+        dispatch_async(dispatch_get_main_queue(), ^{
+                _progressBar.progress = progress;
+        });
     }
-    
-    [[[UIAlertView alloc] initWithTitle:@"완료"
-                                message:[NSString stringWithFormat:@"찾았다 %d개",spaceCount]
-                               delegate:nil
-                      cancelButtonTitle:@"OK"
-                      otherButtonTitles:nil, nil] show];
+    [self showAlertWithMessage:[NSString stringWithFormat:@"스페이스 갯수: %d개",spaceCount]];
 }
 
 

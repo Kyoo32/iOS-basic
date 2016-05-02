@@ -35,7 +35,7 @@
     dispatch_queue_t aQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_async(aQueue, ^{
        //[self workingProgress];
-        [self countSearchingString:@"주식"];
+        [self countSearchingString:@"메롱"];
         [self countWordSet];
         [self countAllWord];
     });

@@ -1,0 +1,540 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CEB794431CD6F08C0006C4C0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB794421CD6F08C0006C4C0 /* main.m */; };
+		CEB794461CD6F08C0006C4C0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB794451CD6F08C0006C4C0 /* AppDelegate.m */; };
+		CEB794491CD6F08C0006C4C0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB794481CD6F08C0006C4C0 /* ViewController.m */; };
+		CEB7944C1CD6F08C0006C4C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB7944A1CD6F08C0006C4C0 /* Main.storyboard */; };
+		CEB7944E1CD6F08C0006C4C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEB7944D1CD6F08C0006C4C0 /* Assets.xcassets */; };
+		CEB794511CD6F08C0006C4C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB7944F1CD6F08C0006C4C0 /* LaunchScreen.storyboard */; };
+		CEB7945C1CD6F08D0006C4C0 /* week10_mulitTouchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB7945B1CD6F08D0006C4C0 /* week10_mulitTouchTests.m */; };
+		CEB794671CD6F08D0006C4C0 /* week10_mulitTouchUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB794661CD6F08D0006C4C0 /* week10_mulitTouchUITests.m */; };
+		CEB794761CD6F0D50006C4C0 /* MYView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB794751CD6F0D50006C4C0 /* MYView.m */; };
+		CEB794791CD6FF050006C4C0 /* checkGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB794781CD6FF050006C4C0 /* checkGestureRecognizer.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CEB794581CD6F08D0006C4C0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEB794361CD6F08C0006C4C0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CEB7943D1CD6F08C0006C4C0;
+			remoteInfo = week10_mulitTouch;
+		};
+		CEB794631CD6F08D0006C4C0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEB794361CD6F08C0006C4C0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CEB7943D1CD6F08C0006C4C0;
+			remoteInfo = week10_mulitTouch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CEB7943E1CD6F08C0006C4C0 /* week10_mulitTouch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = week10_mulitTouch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEB794421CD6F08C0006C4C0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CEB794441CD6F08C0006C4C0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CEB794451CD6F08C0006C4C0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CEB794471CD6F08C0006C4C0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CEB794481CD6F08C0006C4C0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CEB7944B1CD6F08C0006C4C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CEB7944D1CD6F08C0006C4C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CEB794501CD6F08C0006C4C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CEB794521CD6F08C0006C4C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEB794571CD6F08D0006C4C0 /* week10_mulitTouchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = week10_mulitTouchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEB7945B1CD6F08D0006C4C0 /* week10_mulitTouchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = week10_mulitTouchTests.m; sourceTree = "<group>"; };
+		CEB7945D1CD6F08D0006C4C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEB794621CD6F08D0006C4C0 /* week10_mulitTouchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = week10_mulitTouchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEB794661CD6F08D0006C4C0 /* week10_mulitTouchUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = week10_mulitTouchUITests.m; sourceTree = "<group>"; };
+		CEB794681CD6F08D0006C4C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEB794741CD6F0D50006C4C0 /* MYView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYView.h; sourceTree = "<group>"; };
+		CEB794751CD6F0D50006C4C0 /* MYView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYView.m; sourceTree = "<group>"; };
+		CEB794771CD6FF050006C4C0 /* checkGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = checkGestureRecognizer.h; sourceTree = "<group>"; };
+		CEB794781CD6FF050006C4C0 /* checkGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = checkGestureRecognizer.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CEB7943B1CD6F08C0006C4C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEB794541CD6F08D0006C4C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEB7945F1CD6F08D0006C4C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CEB794351CD6F08C0006C4C0 = {
+			isa = PBXGroup;
+			children = (
+				CEB794401CD6F08C0006C4C0 /* week10_mulitTouch */,
+				CEB7945A1CD6F08D0006C4C0 /* week10_mulitTouchTests */,
+				CEB794651CD6F08D0006C4C0 /* week10_mulitTouchUITests */,
+				CEB7943F1CD6F08C0006C4C0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CEB7943F1CD6F08C0006C4C0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CEB7943E1CD6F08C0006C4C0 /* week10_mulitTouch.app */,
+				CEB794571CD6F08D0006C4C0 /* week10_mulitTouchTests.xctest */,
+				CEB794621CD6F08D0006C4C0 /* week10_mulitTouchUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CEB794401CD6F08C0006C4C0 /* week10_mulitTouch */ = {
+			isa = PBXGroup;
+			children = (
+				CEB794441CD6F08C0006C4C0 /* AppDelegate.h */,
+				CEB794451CD6F08C0006C4C0 /* AppDelegate.m */,
+				CEB794741CD6F0D50006C4C0 /* MYView.h */,
+				CEB794751CD6F0D50006C4C0 /* MYView.m */,
+				CEB794471CD6F08C0006C4C0 /* ViewController.h */,
+				CEB794481CD6F08C0006C4C0 /* ViewController.m */,
+				CEB7944A1CD6F08C0006C4C0 /* Main.storyboard */,
+				CEB7944D1CD6F08C0006C4C0 /* Assets.xcassets */,
+				CEB7944F1CD6F08C0006C4C0 /* LaunchScreen.storyboard */,
+				CEB794521CD6F08C0006C4C0 /* Info.plist */,
+				CEB794411CD6F08C0006C4C0 /* Supporting Files */,
+				CEB794771CD6FF050006C4C0 /* checkGestureRecognizer.h */,
+				CEB794781CD6FF050006C4C0 /* checkGestureRecognizer.m */,
+			);
+			path = week10_mulitTouch;
+			sourceTree = "<group>";
+		};
+		CEB794411CD6F08C0006C4C0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CEB794421CD6F08C0006C4C0 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CEB7945A1CD6F08D0006C4C0 /* week10_mulitTouchTests */ = {
+			isa = PBXGroup;
+			children = (
+				CEB7945B1CD6F08D0006C4C0 /* week10_mulitTouchTests.m */,
+				CEB7945D1CD6F08D0006C4C0 /* Info.plist */,
+			);
+			path = week10_mulitTouchTests;
+			sourceTree = "<group>";
+		};
+		CEB794651CD6F08D0006C4C0 /* week10_mulitTouchUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CEB794661CD6F08D0006C4C0 /* week10_mulitTouchUITests.m */,
+				CEB794681CD6F08D0006C4C0 /* Info.plist */,
+			);
+			path = week10_mulitTouchUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CEB7943D1CD6F08C0006C4C0 /* week10_mulitTouch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEB7946B1CD6F08D0006C4C0 /* Build configuration list for PBXNativeTarget "week10_mulitTouch" */;
+			buildPhases = (
+				CEB7943A1CD6F08C0006C4C0 /* Sources */,
+				CEB7943B1CD6F08C0006C4C0 /* Frameworks */,
+				CEB7943C1CD6F08C0006C4C0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = week10_mulitTouch;
+			productName = week10_mulitTouch;
+			productReference = CEB7943E1CD6F08C0006C4C0 /* week10_mulitTouch.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CEB794561CD6F08D0006C4C0 /* week10_mulitTouchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEB7946E1CD6F08D0006C4C0 /* Build configuration list for PBXNativeTarget "week10_mulitTouchTests" */;
+			buildPhases = (
+				CEB794531CD6F08D0006C4C0 /* Sources */,
+				CEB794541CD6F08D0006C4C0 /* Frameworks */,
+				CEB794551CD6F08D0006C4C0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CEB794591CD6F08D0006C4C0 /* PBXTargetDependency */,
+			);
+			name = week10_mulitTouchTests;
+			productName = week10_mulitTouchTests;
+			productReference = CEB794571CD6F08D0006C4C0 /* week10_mulitTouchTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CEB794611CD6F08D0006C4C0 /* week10_mulitTouchUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEB794711CD6F08D0006C4C0 /* Build configuration list for PBXNativeTarget "week10_mulitTouchUITests" */;
+			buildPhases = (
+				CEB7945E1CD6F08D0006C4C0 /* Sources */,
+				CEB7945F1CD6F08D0006C4C0 /* Frameworks */,
+				CEB794601CD6F08D0006C4C0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CEB794641CD6F08D0006C4C0 /* PBXTargetDependency */,
+			);
+			name = week10_mulitTouchUITests;
+			productName = week10_mulitTouchUITests;
+			productReference = CEB794621CD6F08D0006C4C0 /* week10_mulitTouchUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CEB794361CD6F08C0006C4C0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Lee Kyu-Won";
+				TargetAttributes = {
+					CEB7943D1CD6F08C0006C4C0 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 39WT95YDMW;
+					};
+					CEB794561CD6F08D0006C4C0 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = CEB7943D1CD6F08C0006C4C0;
+					};
+					CEB794611CD6F08D0006C4C0 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = CEB7943D1CD6F08C0006C4C0;
+					};
+				};
+			};
+			buildConfigurationList = CEB794391CD6F08C0006C4C0 /* Build configuration list for PBXProject "week10_mulitTouch" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CEB794351CD6F08C0006C4C0;
+			productRefGroup = CEB7943F1CD6F08C0006C4C0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CEB7943D1CD6F08C0006C4C0 /* week10_mulitTouch */,
+				CEB794561CD6F08D0006C4C0 /* week10_mulitTouchTests */,
+				CEB794611CD6F08D0006C4C0 /* week10_mulitTouchUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CEB7943C1CD6F08C0006C4C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEB794511CD6F08C0006C4C0 /* LaunchScreen.storyboard in Resources */,
+				CEB7944E1CD6F08C0006C4C0 /* Assets.xcassets in Resources */,
+				CEB7944C1CD6F08C0006C4C0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEB794551CD6F08D0006C4C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEB794601CD6F08D0006C4C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CEB7943A1CD6F08C0006C4C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEB794761CD6F0D50006C4C0 /* MYView.m in Sources */,
+				CEB794491CD6F08C0006C4C0 /* ViewController.m in Sources */,
+				CEB794461CD6F08C0006C4C0 /* AppDelegate.m in Sources */,
+				CEB794431CD6F08C0006C4C0 /* main.m in Sources */,
+				CEB794791CD6FF050006C4C0 /* checkGestureRecognizer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEB794531CD6F08D0006C4C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEB7945C1CD6F08D0006C4C0 /* week10_mulitTouchTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEB7945E1CD6F08D0006C4C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEB794671CD6F08D0006C4C0 /* week10_mulitTouchUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CEB794591CD6F08D0006C4C0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CEB7943D1CD6F08C0006C4C0 /* week10_mulitTouch */;
+			targetProxy = CEB794581CD6F08D0006C4C0 /* PBXContainerItemProxy */;
+		};
+		CEB794641CD6F08D0006C4C0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CEB7943D1CD6F08C0006C4C0 /* week10_mulitTouch */;
+			targetProxy = CEB794631CD6F08D0006C4C0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CEB7944A1CD6F08C0006C4C0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEB7944B1CD6F08C0006C4C0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CEB7944F1CD6F08C0006C4C0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEB794501CD6F08C0006C4C0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CEB794691CD6F08D0006C4C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CEB7946A1CD6F08D0006C4C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CEB7946C1CD6F08D0006C4C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = week10_mulitTouch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "next16.week10-mulitTouch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		CEB7946D1CD6F08D0006C4C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = week10_mulitTouch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "next16.week10-mulitTouch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		CEB7946F1CD6F08D0006C4C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = week10_mulitTouchTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "next16.week10-mulitTouchTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/week10_mulitTouch.app/week10_mulitTouch";
+			};
+			name = Debug;
+		};
+		CEB794701CD6F08D0006C4C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = week10_mulitTouchTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "next16.week10-mulitTouchTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/week10_mulitTouch.app/week10_mulitTouch";
+			};
+			name = Release;
+		};
+		CEB794721CD6F08D0006C4C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = week10_mulitTouchUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "next16.week10-mulitTouchUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = week10_mulitTouch;
+			};
+			name = Debug;
+		};
+		CEB794731CD6F08D0006C4C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = week10_mulitTouchUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "next16.week10-mulitTouchUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = week10_mulitTouch;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CEB794391CD6F08C0006C4C0 /* Build configuration list for PBXProject "week10_mulitTouch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEB794691CD6F08D0006C4C0 /* Debug */,
+				CEB7946A1CD6F08D0006C4C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEB7946B1CD6F08D0006C4C0 /* Build configuration list for PBXNativeTarget "week10_mulitTouch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEB7946C1CD6F08D0006C4C0 /* Debug */,
+				CEB7946D1CD6F08D0006C4C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CEB7946E1CD6F08D0006C4C0 /* Build configuration list for PBXNativeTarget "week10_mulitTouchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEB7946F1CD6F08D0006C4C0 /* Debug */,
+				CEB794701CD6F08D0006C4C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CEB794711CD6F08D0006C4C0 /* Build configuration list for PBXNativeTarget "week10_mulitTouchUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEB794721CD6F08D0006C4C0 /* Debug */,
+				CEB794731CD6F08D0006C4C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CEB794361CD6F08C0006C4C0 /* Project object */;
+}

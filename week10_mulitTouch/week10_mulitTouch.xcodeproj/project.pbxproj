@@ -17,6 +17,8 @@
 		CEB794671CD6F08D0006C4C0 /* week10_mulitTouchUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB794661CD6F08D0006C4C0 /* week10_mulitTouchUITests.m */; };
 		CEB794761CD6F0D50006C4C0 /* MYView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB794751CD6F0D50006C4C0 /* MYView.m */; };
 		CEB794791CD6FF050006C4C0 /* checkGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB794781CD6FF050006C4C0 /* checkGestureRecognizer.m */; };
+		CED0CC6E1CD9839D00B023A3 /* NumberSketchBookView.m in Sources */ = {isa = PBXBuildFile; fileRef = CED0CC6D1CD9839D00B023A3 /* NumberSketchBookView.m */; };
+		CED0CC711CD9898300B023A3 /* SketchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CED0CC701CD9898300B023A3 /* SketchViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,10 @@
 		CEB794751CD6F0D50006C4C0 /* MYView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYView.m; sourceTree = "<group>"; };
 		CEB794771CD6FF050006C4C0 /* checkGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = checkGestureRecognizer.h; sourceTree = "<group>"; };
 		CEB794781CD6FF050006C4C0 /* checkGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = checkGestureRecognizer.m; sourceTree = "<group>"; };
+		CED0CC6C1CD9839D00B023A3 /* NumberSketchBookView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberSketchBookView.h; sourceTree = "<group>"; };
+		CED0CC6D1CD9839D00B023A3 /* NumberSketchBookView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberSketchBookView.m; sourceTree = "<group>"; };
+		CED0CC6F1CD9898300B023A3 /* SketchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SketchViewController.h; sourceTree = "<group>"; };
+		CED0CC701CD9898300B023A3 /* SketchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SketchViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,15 +117,19 @@
 				CEB794451CD6F08C0006C4C0 /* AppDelegate.m */,
 				CEB794741CD6F0D50006C4C0 /* MYView.h */,
 				CEB794751CD6F0D50006C4C0 /* MYView.m */,
+				CEB794771CD6FF050006C4C0 /* checkGestureRecognizer.h */,
+				CEB794781CD6FF050006C4C0 /* checkGestureRecognizer.m */,
 				CEB794471CD6F08C0006C4C0 /* ViewController.h */,
 				CEB794481CD6F08C0006C4C0 /* ViewController.m */,
+				CED0CC6F1CD9898300B023A3 /* SketchViewController.h */,
+				CED0CC701CD9898300B023A3 /* SketchViewController.m */,
+				CED0CC6C1CD9839D00B023A3 /* NumberSketchBookView.h */,
+				CED0CC6D1CD9839D00B023A3 /* NumberSketchBookView.m */,
 				CEB7944A1CD6F08C0006C4C0 /* Main.storyboard */,
 				CEB7944D1CD6F08C0006C4C0 /* Assets.xcassets */,
 				CEB7944F1CD6F08C0006C4C0 /* LaunchScreen.storyboard */,
 				CEB794521CD6F08C0006C4C0 /* Info.plist */,
 				CEB794411CD6F08C0006C4C0 /* Supporting Files */,
-				CEB794771CD6FF050006C4C0 /* checkGestureRecognizer.h */,
-				CEB794781CD6FF050006C4C0 /* checkGestureRecognizer.m */,
 			);
 			path = week10_mulitTouch;
 			sourceTree = "<group>";
@@ -282,7 +292,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEB794761CD6F0D50006C4C0 /* MYView.m in Sources */,
+				CED0CC711CD9898300B023A3 /* SketchViewController.m in Sources */,
 				CEB794491CD6F08C0006C4C0 /* ViewController.m in Sources */,
+				CED0CC6E1CD9839D00B023A3 /* NumberSketchBookView.m in Sources */,
 				CEB794461CD6F08C0006C4C0 /* AppDelegate.m in Sources */,
 				CEB794431CD6F08C0006C4C0 /* main.m in Sources */,
 				CEB794791CD6FF050006C4C0 /* checkGestureRecognizer.m in Sources */,
@@ -517,6 +529,7 @@
 				CEB7946D1CD6F08D0006C4C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CEB7946E1CD6F08D0006C4C0 /* Build configuration list for PBXNativeTarget "week10_mulitTouchTests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +538,7 @@
 				CEB794701CD6F08D0006C4C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CEB794711CD6F08D0006C4C0 /* Build configuration list for PBXNativeTarget "week10_mulitTouchUITests" */ = {
 			isa = XCConfigurationList;
@@ -533,6 +547,7 @@
 				CEB794731CD6F08D0006C4C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

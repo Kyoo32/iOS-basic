@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,11 +17,43 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="MYView">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GRX-ee-HoR">
+                                <rect key="frame" x="487" y="44" width="69" height="30"/>
+                                <state key="normal" title="숫자 그리기"/>
+                                <connections>
+                                    <segue destination="kNS-rL-u2i" kind="show" id="W79-FQ-DTK"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="GRX-ee-HoR" secondAttribute="trailing" constant="24" id="9uH-wx-lNS"/>
+                            <constraint firstItem="GRX-ee-HoR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="24" id="tO9-DF-fQO"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="151" y="107"/>
+        </scene>
+        <!--Sketch View Controller-->
+        <scene sceneID="dBB-Os-nkI">
+            <objects>
+                <viewController id="kNS-rL-u2i" customClass="SketchViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jYU-AJ-sGS"/>
+                        <viewControllerLayoutGuide type="bottom" id="xON-f0-mWD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kdH-bz-0Rc" customClass="NumberSketchBookView">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a1H-8u-9J0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="851" y="38"/>
         </scene>
     </scenes>
 </document>

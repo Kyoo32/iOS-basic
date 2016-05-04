@@ -45,7 +45,7 @@
                         <viewControllerLayoutGuide type="top" id="jYU-AJ-sGS"/>
                         <viewControllerLayoutGuide type="bottom" id="xON-f0-mWD"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kdH-bz-0Rc" customClass="NumberSketchBookView">
+                    <view key="view" contentMode="scaleToFill" id="kdH-bz-0Rc">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

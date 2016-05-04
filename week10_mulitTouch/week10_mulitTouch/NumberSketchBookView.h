@@ -11,7 +11,7 @@
 @interface NumberSketchBookView : UIView
 
 
-@property NSMutableArray<UITouch*>* touchPoints;
-@property bool isSuccess;
+@property NSMutableArray* touchPoints;
+
 
 @end

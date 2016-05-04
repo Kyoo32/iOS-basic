@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NumberSketchBookView.h"
 
 @interface SketchViewController : UIViewController
+
+@property NumberSketchBookView *myview;
+
 
 @end

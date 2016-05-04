@@ -10,6 +10,15 @@
 
 @implementation NumberSketchBookView
 
+-(instancetype)initWithFrame:(CGRect)frame{
+    self = [super initWithFrame:frame];
+    if(self){
+        NSLog(@"what");
+        _touchPoints = [[NSMutableArray alloc]init];
+    }
+    return self;
+}
+
 -(instancetype)initWithCoder:(NSCoder *)aDecoder{
    self =  [super initWithCoder:aDecoder];
     if(self){
@@ -19,66 +28,65 @@
 }
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    //required!!!!
-//    CGContextRef context = UIGraphicsGetCurrentContext();
-//    CGContextClearRect(context, self.bounds);
-   // [self resetArray];
+    [self resetArray];
     [super touchesBegan:touches withEvent:event];
-     NSLog(@"view drawing start");
-    if ([touches count] != 1) {
-        _isSuccess = NO;
-        return;
-    }
+     NSLog(@"1. view drawing start %@", _touchPoints);
+   
     UITouch *touch = [[event allTouches] anyObject];
-    [_touchPoints addObject:touch];
-    [self setNeedsDisplay];
+    [_touchPoints addObject:[NSValue valueWithCGPoint:[touch locationInView:self]]];
+    NSLog(@"view drawing start %@", _touchPoints);
+
 }
 
 -(void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     [super touchesMoved:touches withEvent:event];
-    //if(_isSuccess == NO) return;
     UITouch *touch = [[event allTouches] anyObject];
-    [_touchPoints addObject:touch];
-    [self setNeedsDisplay];
+    [_touchPoints addObject:[NSValue valueWithCGPoint:[touch locationInView:self]]];
 }
 
 
 -(void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     
     [super touchesEnded:touches withEvent:event];
-    
-   // if(_isSuccess == NO) return;
     UITouch *touch = [[event allTouches] anyObject];
-    [_touchPoints addObject:touch];
-    
+    [_touchPoints addObject:[NSValue valueWithCGPoint:[touch locationInView:self]]];
     NSLog(@"view drawing end");
     [self setNeedsDisplay];
+    
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"judgeNumberOne" object:self];
 }
 
 - (void)touchesCancelled:(NSSet<UITouch *> *)touches
                withEvent:(UIEvent *)event{
-    
     [super touchesCancelled: touches withEvent:event];
 }
 
 -(void)drawRect:(CGRect)rect{
+    [super drawRect:rect];
+    
     CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    CGContextClearRect(context, [self bounds]);
+    
     CGContextSetLineWidth(context, 2.0);
     CGContextSetStrokeColorWithColor(context, [UIColor greenColor].CGColor);
     
     if([_touchPoints count] > 0){
-        CGContextMoveToPoint(context, [_touchPoints[0] locationInView:self].x, [_touchPoints[0] locationInView:self].y);
+        CGPoint location;
+        [_touchPoints[0] getValue:&location];
+        CGContextMoveToPoint(context,location.x, location.y);
         
         for(int i = 1; i < [_touchPoints count] ; i++){
-            CGContextAddLineToPoint(context, [_touchPoints[i] locationInView:self].x, [_touchPoints[i] locationInView:self].y);
+            [_touchPoints[i] getValue:&location];
+            CGContextAddLineToPoint(context,location.x, location.y);
+            
         }
     }
-    
     CGContextStrokePath(context);
-
 }
 
 -(void)resetArray{
+    NSLog(@"reset");
     [_touchPoints removeAllObjects];
 }
 

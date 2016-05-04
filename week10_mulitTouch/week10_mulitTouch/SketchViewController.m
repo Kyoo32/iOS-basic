@@ -14,12 +14,45 @@
 }
 
 
+
+//스케치 뷰 컨트롤러는 뷰의 터치 점 콜렉션을 가져와 숫자인지, 숫자라면 어떤 숫자인지 판단합니다.
+
 -(void)viewDidLoad{
      _myview = [[NumberSketchBookView alloc]initWithFrame:CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height)];
     NSLog(@"myview : %@",_myview);
     [self.view addSubview:_myview];
     
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(judgeNumberOne) name:@"judgeNumberOne" object:_myview];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(judgeNumberTwo) name:@"judgeNumberTwo" object:_myview];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(judgeNumberThree) name:@"judgeNumberThree" object:_myview];
+    
+    // 숫자 인식하는 매소드 10개를 다 만들면, 노티 하나에 selector는 judgeNumber로 합니다. //일단 1,2,3
+    // judgeNumber는 judgeNumberZero, judgeNumberOne,... , judgeNumberNine을 병렬처리 합니다.
+    // judgeNumberN의 구조는 같습니다.  뷰의 터치 점 콜렉션을 판단하여 숫자 N인지 판단합니다. 맞으면 맞다는 메세지가 담긴, 아니라면 아니라는 메세지의 알림창을 보냅니다.
+}
+
+-(void)judgeNumberThress{
+    points = _myview.touchPoints;
+    int pointCount = [points count];
+    /* 숫자 3 판단 과정
+     
+     숫자 3은 아치도형 두개가 이어진 모양이다.
+        1. 먼저 아치도형 두개를 구분하는 지점(분리점)을 찾는다.:x값이 증가하는 도입, 두번째 지점
+        2. 아치도형은 "시작점, 분리점, 시작점과 분리점의 중점에서 가장 먼 점이 이루는 삼각형의 넓이보다 각 점들에서 시작점 분리점 직선에서 수직으로 내린 직선의 합이 클 경우"이다. 두개 다 확인한다.
+     */
+}
+
+-(void)judgeNumberTwo{
+    points = _myview.touchPoints;
+    int pointCount = [points count];
+    /* 숫자 2 판단 과정
+     
+    숫자 2는 아치도형과 선이 이어진 모양이다.
+        1. 먼저 아치도형과 선을 분리하는 지점(분리점)을 찾는다.: x값이 증가하는 도입, 두번째 지점
+        2. 아치도형은 "시작점, 분리점, 시작점과 분리점의 중점에서 가장 먼 점이 이루는 삼각형의 넓이보다 각 점들에서 시작점 분리점 직선에서 수직으로 내린 직선의 합이 클 경우"이다.
+        3. 선은 분리점과 끝점의 x차가 y차보다 크면 된다.
+     */
+    
 }
 
 -(void)judgeNumberOne{

@@ -54,6 +54,8 @@
     [self setNeedsDisplay];
     
     [[NSNotificationCenter defaultCenter]postNotificationName:@"judgeNumberOne" object:self];
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"judgeNumberTwo" object:self];
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"judgeNumberThree" object:self];
 }
 
 - (void)touchesCancelled:(NSSet<UITouch *> *)touches

@@ -31,7 +31,7 @@
     // judgeNumberN의 구조는 같습니다.  뷰의 터치 점 콜렉션을 판단하여 숫자 N인지 판단합니다. 맞으면 맞다는 메세지가 담긴, 아니라면 아니라는 메세지의 알림창을 보냅니다.
 }
 
--(void)judgeNumberThress{
+-(void)judgeNumberThree{
     points = _myview.touchPoints;
     int pointCount = [points count];
     /* 숫자 3 판단 과정
@@ -40,6 +40,34 @@
         1. 먼저 아치도형 두개를 구분하는 지점(분리점)을 찾는다.:x값이 증가하는 도입, 두번째 지점
         2. 아치도형은 "시작점, 분리점, 시작점과 분리점의 중점에서 가장 먼 점이 이루는 삼각형의 넓이보다 각 점들에서 시작점 분리점 직선에서 수직으로 내린 직선의 합이 클 경우"이다. 두개 다 확인한다.
      */
+    CGPoint start;
+    [points[0] getValue:&start];
+    CGPoint end;
+    [points[pointCount-1] getValue:&end];
+    
+    CGPoint cusp;
+    
+    CGPoint current;
+    CGPoint previous;
+    [points[0] getValue:&previous];
+    int times = 1;
+    
+    for(int i = 1 ; i < pointCount - 1; i++){
+        [points[i] getValue:&current];
+        if( times == 1 && (current.x - previous.x)){
+            times++;
+        }
+        if((current.x - previous.x)){
+            [points[i] getValue:&cusp];
+            break;
+        }
+    }
+    
+    
+    
+    
+    
+    
 }
 
 -(void)judgeNumberTwo{
@@ -52,6 +80,39 @@
         2. 아치도형은 "시작점, 분리점, 시작점과 분리점의 중점에서 가장 먼 점이 이루는 삼각형의 넓이보다 각 점들에서 시작점 분리점 직선에서 수직으로 내린 직선의 합이 클 경우"이다.
         3. 선은 분리점과 끝점의 x차가 y차보다 크면 된다.
      */
+    
+    CGPoint start;
+    [points[0] getValue:&start];
+    CGPoint end;
+    [points[pointCount-1] getValue:&end];
+    
+    CGPoint cusp;
+    
+    CGPoint current;
+    CGPoint previous;
+    [points[0] getValue:&previous];
+    int times = 1;
+    
+    for(int i = 1 ; i < pointCount - 1; i++){
+        [points[i] getValue:&current];
+        if( times == 1 && (current.x - previous.x)){
+            times++;
+        }
+        if((current.x - previous.x)){
+            [points[i] getValue:&cusp];
+            break;
+        }
+    }
+    
+    
+    float xDis = end.x - cusp.x;
+    float yDis = end.y - cusp.y;
+    if(xDis < yDis){
+        [self showAlertWithMessage:@"not 2"];
+        return;
+    }
+    
+
     
 }
 

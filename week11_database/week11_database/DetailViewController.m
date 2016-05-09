@@ -28,14 +28,19 @@
 - (void)configureView {
     // Update the user interface for the detail item.
     if (self.detailItem) {
-        self.detailDescriptionLabel.text = [self.detailItem description];
+        //self.detailDescriptionLabel.text = [self.detailItem description];
     }
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    [self configureView];
+    //[self configureView];
+   
+    NSURL *photoUrl = [NSURL URLWithString:[_detailItem valueForKey:kImage]];
+    NSURLRequest *urlRequest = [[NSURLRequest alloc]initWithURL:photoUrl];
+    NSLog(@"loading start");
+    [_myWebView loadRequest:urlRequest];
 }
 
 - (void)didReceiveMemoryWarning {

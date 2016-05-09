@@ -8,6 +8,20 @@
 
 #import "NXSong.h"
 
+NSString* const kTitle = @"title";
+NSString* const kImage = @"image";
+NSString* const kCategory = @"category";
+
+
 @implementation NXSong
+
+-(instancetype)init{
+    self = [super init];
+    if(self){
+       
+    }
+    return self;
+}
+
 
 @end

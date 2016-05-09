@@ -8,6 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+extern NSString* const kTitle;
+extern NSString* const kImage;
+extern NSString* const kCategory;
+
+
 @interface NXSong : NSObject
+
+@property(nonatomic, strong) NSString *title;
+@property(nonatomic, strong) NSString *image;
+@property(nonatomic, strong) NSString *category;
 
 @end

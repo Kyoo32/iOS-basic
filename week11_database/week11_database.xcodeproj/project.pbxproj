@@ -16,6 +16,10 @@
 		CE7FFD7D1CE02C4C00B7139C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE7FFD7B1CE02C4C00B7139C /* LaunchScreen.storyboard */; };
 		CE7FFD881CE02C4C00B7139C /* week11_databaseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7FFD871CE02C4C00B7139C /* week11_databaseTests.m */; };
 		CE7FFD931CE02C4C00B7139C /* week11_databaseUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7FFD921CE02C4C00B7139C /* week11_databaseUITests.m */; };
+		CE7FFDA11CE02DFF00B7139C /* top25.db in Resources */ = {isa = PBXBuildFile; fileRef = CE7FFDA01CE02C6D00B7139C /* top25.db */; };
+		CE7FFDA31CE02ED800B7139C /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7FFDA21CE02ED800B7139C /* libsqlite3.0.tbd */; };
+		CE7FFDA51CE02EDD00B7139C /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7FFDA41CE02EDD00B7139C /* libsqlite3.tbd */; };
+		CE7FFDA81CE0322A00B7139C /* NXSong.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7FFDA71CE0322A00B7139C /* NXSong.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +58,11 @@
 		CE7FFD8E1CE02C4C00B7139C /* week11_databaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = week11_databaseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE7FFD921CE02C4C00B7139C /* week11_databaseUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = week11_databaseUITests.m; sourceTree = "<group>"; };
 		CE7FFD941CE02C4C00B7139C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE7FFDA01CE02C6D00B7139C /* top25.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = top25.db; sourceTree = "<group>"; };
+		CE7FFDA21CE02ED800B7139C /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		CE7FFDA41CE02EDD00B7139C /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		CE7FFDA61CE0322A00B7139C /* NXSong.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NXSong.h; sourceTree = "<group>"; };
+		CE7FFDA71CE0322A00B7139C /* NXSong.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NXSong.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +70,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE7FFDA51CE02EDD00B7139C /* libsqlite3.tbd in Frameworks */,
+				CE7FFDA31CE02ED800B7139C /* libsqlite3.0.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +95,8 @@
 		CE7FFD5E1CE02C4B00B7139C = {
 			isa = PBXGroup;
 			children = (
+				CE7FFDA41CE02EDD00B7139C /* libsqlite3.tbd */,
+				CE7FFDA21CE02ED800B7139C /* libsqlite3.0.tbd */,
 				CE7FFD691CE02C4B00B7139C /* week11_database */,
 				CE7FFD861CE02C4C00B7139C /* week11_databaseTests */,
 				CE7FFD911CE02C4C00B7139C /* week11_databaseUITests */,
@@ -110,6 +123,8 @@
 				CE7FFD711CE02C4C00B7139C /* MasterViewController.m */,
 				CE7FFD731CE02C4C00B7139C /* DetailViewController.h */,
 				CE7FFD741CE02C4C00B7139C /* DetailViewController.m */,
+				CE7FFDA61CE0322A00B7139C /* NXSong.h */,
+				CE7FFDA71CE0322A00B7139C /* NXSong.m */,
 				CE7FFD761CE02C4C00B7139C /* Main.storyboard */,
 				CE7FFD791CE02C4C00B7139C /* Assets.xcassets */,
 				CE7FFD7B1CE02C4C00B7139C /* LaunchScreen.storyboard */,
@@ -122,6 +137,7 @@
 		CE7FFD6A1CE02C4B00B7139C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CE7FFDA01CE02C6D00B7139C /* top25.db */,
 				CE7FFD6B1CE02C4B00B7139C /* main.m */,
 			);
 			name = "Supporting Files";
@@ -248,6 +264,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE7FFDA11CE02DFF00B7139C /* top25.db in Resources */,
 				CE7FFD7D1CE02C4C00B7139C /* LaunchScreen.storyboard in Resources */,
 				CE7FFD7A1CE02C4C00B7139C /* Assets.xcassets in Resources */,
 				CE7FFD781CE02C4C00B7139C /* Main.storyboard in Resources */,
@@ -275,6 +292,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE7FFDA81CE0322A00B7139C /* NXSong.m in Sources */,
 				CE7FFD6F1CE02C4B00B7139C /* AppDelegate.m in Sources */,
 				CE7FFD721CE02C4C00B7139C /* MasterViewController.m in Sources */,
 				CE7FFD6C1CE02C4B00B7139C /* main.m in Sources */,

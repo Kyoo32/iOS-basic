@@ -70,7 +70,8 @@
 
 - (void)configureCell:(UITableViewCell *)cell withObject:(NSManagedObject *)object {
     NSLog(@"%@",object);
-    cell.textLabel.text = [object valueForKey:@"name" ];
+    cell.textLabel.text = [object valueForKey:@"name"];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", [object valueForKey:@"id"]];
 }
 
 

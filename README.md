@@ -39,5 +39,5 @@
 * [week10_multitouch] event by uiTouch, uiGestureRecognizer - 2016. 5. 2 around 15:30
 * [week10_multitouch]입력된 숫자 인식하기 <br />1_현재 1 인식 - 2016. 5. 4 around 17:00<br />2_주석과 숫자2, 3 알고리즘 기록 - 2016. 5. 4 around 23:40 
 
-* [week11_database] practice SQLite and webview - 2016. 5. 9 arond 12:20
-* [week11_coreData] <br />1_(draft)practice NSFetchedResultController, to basic mission - 2016. 5. 11 around 12:55 
+* [week11_database] practice SQLite and webview - 2016. 5. 9 around 12:20
+* [week11_coreData] <br />1_(draft)practice NSFetchedResultController, to basic mission - 2016. 5. 11 around 12:55 <br />2_add cell property - 2016. 5. 11 around 14:20

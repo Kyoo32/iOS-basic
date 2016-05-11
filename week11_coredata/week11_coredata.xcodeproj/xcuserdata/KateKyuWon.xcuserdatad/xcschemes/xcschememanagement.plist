@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>week11_coredata.xcscheme</key>
+		<key>week11_coreData.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,17 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>CE7FFDB11CE03FB500B7139C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>CE7FFDD01CE03FB500B7139C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>CE7FFDDB1CE03FB500B7139C</key>
+		<key>CE791F181CE2BCC100EE26E4</key>
 		<dict>
 			<key>primary</key>
 			<true/>

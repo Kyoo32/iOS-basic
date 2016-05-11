@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CE7FFDB11CE03FB500B7139C"
-               BuildableName = "week11_coredata.app"
-               BlueprintName = "week11_coredata"
-               ReferencedContainer = "container:week11_coredata.xcodeproj">
+               BlueprintIdentifier = "CE791F181CE2BCC100EE26E4"
+               BuildableName = "week11_coreData.app"
+               BlueprintName = "week11_coreData"
+               ReferencedContainer = "container:week11_coreData.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,34 +28,14 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CE7FFDD01CE03FB500B7139C"
-               BuildableName = "week11_coredataTests.xctest"
-               BlueprintName = "week11_coredataTests"
-               ReferencedContainer = "container:week11_coredata.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CE7FFDDB1CE03FB500B7139C"
-               BuildableName = "week11_coredataUITests.xctest"
-               BlueprintName = "week11_coredataUITests"
-               ReferencedContainer = "container:week11_coredata.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CE7FFDB11CE03FB500B7139C"
-            BuildableName = "week11_coredata.app"
-            BlueprintName = "week11_coredata"
-            ReferencedContainer = "container:week11_coredata.xcodeproj">
+            BlueprintIdentifier = "CE791F181CE2BCC100EE26E4"
+            BuildableName = "week11_coreData.app"
+            BlueprintName = "week11_coreData"
+            ReferencedContainer = "container:week11_coreData.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -75,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CE7FFDB11CE03FB500B7139C"
-            BuildableName = "week11_coredata.app"
-            BlueprintName = "week11_coredata"
-            ReferencedContainer = "container:week11_coredata.xcodeproj">
+            BlueprintIdentifier = "CE791F181CE2BCC100EE26E4"
+            BuildableName = "week11_coreData.app"
+            BlueprintName = "week11_coreData"
+            ReferencedContainer = "container:week11_coreData.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -94,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CE7FFDB11CE03FB500B7139C"
-            BuildableName = "week11_coredata.app"
-            BlueprintName = "week11_coredata"
-            ReferencedContainer = "container:week11_coredata.xcodeproj">
+            BlueprintIdentifier = "CE791F181CE2BCC100EE26E4"
+            BuildableName = "week11_coreData.app"
+            BlueprintName = "week11_coreData"
+            ReferencedContainer = "container:week11_coreData.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

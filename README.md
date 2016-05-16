@@ -41,3 +41,5 @@
 
 * [week11_database] practice SQLite and webview - 2016. 5. 9 around 12:20
 * [week11_coreData] <br />1_(draft)practice NSFetchedResultController, to basic mission - 2016. 5. 11 around 12:55 <br />2_add cell property - 2016. 5. 11 around 14:20
+
+* [week12_swift] swift warming up play with Xcode error_instruction - 2016. 5. 16 around 15:35

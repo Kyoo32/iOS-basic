@@ -10,6 +10,7 @@
 
 @interface ViewController ()
 
+
 @end
 
 @implementation ViewController
@@ -20,6 +21,45 @@
     //            [self.tableView insertSections:[NSIndexSet indexSetWithIndex:sectionIndexwithRowAnimation:UITableViewRowAnimationFade];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    
+    
+        func ^^ (radix: Int, power: Int) -> Int {
+        return Int(pow(Double(radix), Double(power)))
+    }
+    
+    
+    func hammingWeight(input :Int)->(bitStirng:String, numberOneCount :Int){
+        var maxDivider = 0
+        var resultBitString = ""
+        var count = 0
+        
+        for divider in 0...31 {
+            if(input / divider == 1){
+                maxDivider = divider
+                break
+            }
+        }
+        
+        var quotient = 0
+        var dividend = input
+        var reminder = 0
+        
+        for divisor in (0...maxDivider).reverse(){
+            
+            quotient = input / 2^^divisor
+            if(quotient == 1) {count + 1}
+            resultBitString += String(quotient)
+            
+            reminder = dividend - quotient * (2^^divisor)
+            dividend = reminder
+        }
+        
+        return(resultBitString, count)
+    }
+    
+    hammingWeight(11)
+    
+
 
 }
 

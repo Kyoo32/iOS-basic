@@ -43,3 +43,4 @@
 * [week11_coreData] <br />1_(draft)practice NSFetchedResultController, to basic mission - 2016. 5. 11 around 12:55 <br />2_add cell property - 2016. 5. 11 around 14:20
 
 * [week12_swift] swift warming up play with Xcode error_instruction - 2016. 5. 16 around 15:35
+* [week12_pascalSwift] functional 연습 - 2016. 5. 18 around 15:51

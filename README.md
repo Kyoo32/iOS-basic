@@ -1,4 +1,6 @@
 #### iOS-basic
+* Next iOS Basic lecture 기록
+* 자세한 설명은 [wiki](https://github.com/Kyoo32/iOS-basic/wiki)를 참고하세요.
 
 ### commit time
 * [week1_object&file]<br />done until class - 2016. 3. 2 12:08pm
